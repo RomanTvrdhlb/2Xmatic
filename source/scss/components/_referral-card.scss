@@ -1,0 +1,124 @@
+.referral-card{
+    position: relative;
+    border-radius: 12px;
+    background-color: rgba(var(--bg-a),1.0);
+    max-width: 280px;
+    min-height: Min(10.545vw, 116px);
+    padding-top: 25px;
+
+    &__name{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+        font-family:  var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(var(--cl-d),1.0);
+        background: rgba(var(--bg-j),1.0);
+        border-radius: 80px;
+        padding: 7px 20px;
+    }
+
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &:before{
+            position: absolute;
+            content: "";
+            width: 227px;
+            height: 54px;
+            background-image: url(/img/icons/coin.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+
+        &-value{
+            font-family: var(--font-family2);
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 120%;
+            color: rgba(var(--bg-d),1.0);
+        }
+
+        &-coin{
+            display: flex;
+            align-items: center;
+            grid-gap: 6px;
+            font-family: var(--font-family);
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+            color: rgba(var(--cl-c),1.0);
+        }
+
+        &--mode{
+            &::before{
+                width: 0;
+            }
+        }
+    }
+
+    &__bottom{
+        background: rgba(var(--bg-h),1.0);
+        border-radius: 0px 0px 12px 12px;
+        padding: 8px 14px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--mode{
+            justify-content: center;
+           background-color: rgba(var(--bg-d),1.0);
+        }
+
+        &-amount{
+            font-family: var(--font-family);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            color:  rgba(var(--cl-e),1.0);
+        }
+
+        &-value{
+            display: flex;
+            align-items: center;
+            font-family: var(--font-family);
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 110%;
+            color: rgba(var(--cl-b),1.0);
+
+        }
+
+        &-btn{
+            display: flex;
+            align-items: center;
+            grid-gap: 4px;
+            justify-content: center;
+            font-family: var(--font-family);
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 120%;
+            color: rgba(var(--cl-a),1.0);
+
+            svg{
+                fill: currentColor;
+            }
+        }
+    }
+}

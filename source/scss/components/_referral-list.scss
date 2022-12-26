@@ -1,0 +1,6 @@
+.referral-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: clamp(20px, 3.182vw, 35px) clamp(10px, 1.818vw, 20px);
+    max-width: 580px;
+}

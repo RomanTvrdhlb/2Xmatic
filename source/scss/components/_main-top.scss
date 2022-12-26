@@ -1,0 +1,29 @@
+.main-top {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+
+  @include mobile {
+    grid-gap: 10px;
+  }
+
+  &__title {
+    font-family: var(--font-family2);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 120%;
+    color: rgba(var(--cl-a),1.0);
+  }
+
+  &__text {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(14px, 1.345vw, 16px);
+    line-height: 150%;
+
+
+    color: rgba(var(--cl-f),1.0);
+  }
+}

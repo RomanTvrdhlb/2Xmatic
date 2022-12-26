@@ -1,0 +1,119 @@
+.invest-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-gap: 8px;
+    padding: clamp(13px, 2.091vw, 23px) clamp(12px, 2.182vw, 24px);
+    background: rgba(var(--bg-a),1.0);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+
+    &__name{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: rgba(var(--cl-e),1.0);
+    }
+
+    &__value{
+        font-family: var(--font-family2);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        color: rgba(var(--cl-c),1.0);
+        max-width: 148px;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__icon{
+       
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+
+        &--mode{
+            width: 80px;
+            transform: translate(34%, -50%);
+            img, picture{
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+
+    &__amount{
+
+        --icon-margin:34px;
+
+        color: rgba(var(--cl-f),1.0);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        grid-gap: 4px;
+        padding: 7px 14px;
+        width: fit-content;
+        background: #FEEEDF;
+        border-radius: 126px;
+        margin-left: var(--icon-margin);
+        position: relative; 
+
+
+
+        &:before{
+            position: absolute;
+            content: "";
+            width: 23px;
+            height: 24px;
+            background-image: url(/img/sprite/line.svg);
+            left: calc((var(--icon-margin) + 8px) * -1);
+            top: 0;
+        }
+
+        &--orange{
+            color: rgba(var(--cl-g),1.0);
+        }
+
+        svg{
+            fill: currentColor;
+        }
+    }
+
+    &__btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 4px;
+        background: rgba(var(--bg-d),1.0);
+        border-radius: 12px;
+        padding: 15px;
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 120% ;
+        color: rgba(var(--cl-a),1.0);
+        transition:  all .4s;
+
+        svg{
+            fill: currentColor;
+            transition: transparent;
+        }
+
+
+    }
+
+    &--mode{
+        padding: clamp(13px, 2.091vw, 23px) clamp(12px, 2.182vw, 24px) 14px; 
+    }
+}

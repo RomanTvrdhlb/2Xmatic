@@ -1,0 +1,9 @@
+.referral-section{
+
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(25px, 4.091vw, 45px);
+    }
+}

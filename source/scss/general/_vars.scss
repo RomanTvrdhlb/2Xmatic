@@ -1,0 +1,97 @@
+// --------------- hex to rgba mixin ---------------
+@function HexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+:root {
+// --------------- default global variable ---------------
+  --body-bg: #ffffff;
+  --body-font-size: 16px;
+  --content-width: 1100px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+// --------------- default JS variable ---------------
+  --header-height: 77px;
+// --------------- default JS tablet variable ---------------
+  @media (max-width: 1024px) {
+    --header-height: 66px;
+  }
+
+// --------------- default JS small-tablet variable ---------------
+  @media (max-width: 767px) {
+    --header-height:87px;
+  }
+
+// --------------- default JS mobile variable ---------------
+  @media (max-width: 576px) {
+    --header-height:62px;
+  }
+
+// --------------- default scroll variable ---------------
+  --scrollbar-thumb: #fff;
+  --scrollbar-thumb-hover: #fff;
+  --scrollbar-track:  #6866F6;
+  --scrollbar-track-hover: #6866F6;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+
+// --------------- default slect variable ---------------
+  --select-inner-bg: #404040;
+  --select-inner-border: #FDFDFD;
+  --select-focus-border: #FDFDFD;
+
+// --------------- default font-family variable ---------------
+  --font-family: "Raleway" , sans-serif; // var(--font-family);
+  --font-family2: "Inter" , sans-serif; // var(--font-family2);
+
+
+// --------------- default text color variable ---------------
+  --burger-cl: #{HexToRGB(#00d655)};
+
+  --cl-a: #{HexToRGB(#ffffff)}; // rgba(var(--cl-a),1.0);
+  --cl-b: #{HexToRGB(#000000)}; // rgba(var(--cl-b),1.0);
+  --cl-c: #{HexToRGB(#061024)}; // rgba(var(--cl-c),1.0);
+  --cl-d: #{HexToRGB(#834AFC)}; // rgba(var(--cl-d),1.0);
+  --cl-e: #{HexToRGB(#52525D)}; // rgba(var(--cl-e),1.0);
+  --cl-f: #{HexToRGB(#44AAC0)}; // rgba(var(--cl-f),1.0);
+  --cl-g: #{HexToRGB(#F8943A)}; // rgba(var(--cl-g),1.0);
+
+  --cl-h: #{HexToRGB(#081428)}; // rgba(var(--cl-h),1.0);
+  --cl-i: #{HexToRGB(#66F6A8)}; // rgba(var(--cl-i),1.0);
+  --cl-j: #{HexToRGB(#BAC9F0)}; // rgba(var(--cl-j),1.0);
+
+
+// --------------- default background cl variable ---------------
+  --bg-a: #{HexToRGB(#ffffff)}; // rgba(var(--bg-a),1.0);
+  --bg-b: #{HexToRGB(#000000)}; // rgba(var(--bg-b),1.0);
+  --bg-c: #{HexToRGB(#030514)}; // rgba(var(--bg-c),1.0);
+  --bg-d: #{HexToRGB(#834AFC)}; // rgba(var(--bg-d),1.0);
+  --bg-e: #{HexToRGB(#52525D)}; // rgba(var(--bg-e),1.0);
+  --bg-f: #{HexToRGB(#44AAC0)}; // rgba(var(--bg-f),1.0);
+  --bg-g: #{HexToRGB(#F8943A)}; // rgba(var(--bg-g),1.0);
+  --bg-h: #{HexToRGB(#F7F7F8)}; // rgba(var(--bg-h),1.0);
+  --bg-i: #{HexToRGB(#FEEEDF)}; // rgba(var(--bg-i),1.0);
+  --bg-j: #{HexToRGB(#EBE2FF)}; // rgba(var(--bg-j),1.0);
+
+
+
+// --------------- default border cl variable ---------------
+  --br-a: #834AFC; // var(--br-a);
+
+  --br-b: #cecece; // var(--br-b);
+  --br-c: #6866F6; // var(--br-c);
+
+
+// --------------- gradient background cl variable ---------------
+
+  --gradient-bg: radial-gradient(34.76% 133.29% at 57.92% 58.41%, rgba(131, 74, 252, 0.3) 0%, rgba(131, 74, 252, 0) 100%),radial-gradient(86.82% 142.13% at 89.97% 36.76%, rgba(131, 74, 252, 0.3) 0%, rgba(131, 74, 252, 0) 100%),linear-gradient(100.05deg, rgba(131, 74, 252, 0.3) 28.28%, rgba(45, 143, 234, 0.3) 53.98%);
+
+
+// --------------- icon background cl variable ---------------
+
+  --icon-a: rgb(104, 102, 246); // var(--icon-a);
+  --icon-b: rgb(231, 65, 66); // var(--icon-b);
+  --icon-c: rgb(45, 216, 74); // var(--icon-c);
+  --icon-d: rgb(185, 139, 242); // var(--icon-d);
+  --icon-e: rgb(242, 184, 72); // var(--icon-e);
+  --icon-f: rgb(34, 158, 120); // var(--icon-f);
+}

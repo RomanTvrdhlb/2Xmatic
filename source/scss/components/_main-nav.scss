@@ -1,0 +1,27 @@
+.main-nav {
+
+  &__list {
+    display: flex;
+    align-items: center;
+    grid-gap: 32px;
+  }
+
+  &__item {
+    cursor: pointer;
+    color:  rgba(var(--cl-c),1.0);
+    transition: all .4s;
+  }
+
+  &__link {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 110%;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    grid-gap: 6px;
+  }
+
+}

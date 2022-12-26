@@ -1,0 +1,13 @@
+.investment-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: clamp(5px, 1.818vw, 20px);
+
+    &__item{
+
+
+        &--mode{
+            grid-column: span 2;
+        }
+    }
+}

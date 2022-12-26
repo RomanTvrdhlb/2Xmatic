@@ -1,0 +1,26 @@
+.hidden-list {
+  display: none;
+  // display: flex;
+  flex-direction: column;
+  grid-gap: 18px;
+  padding: 20px;
+  background: rgba(var(--cl-d),1.0);
+  border-radius: 12px;
+  width: 200px;
+
+  &__link {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(var(--cl-a),1.0);
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+  }
+
+  svg {
+    fill: transparent;
+  }
+}

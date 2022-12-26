@@ -1,0 +1,52 @@
+.diagram {
+  display: flex;
+  position: relative;
+
+  &__inner {
+    max-width: Min(21.008vw,250px);
+    padding: Min(2.521vw,30px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: green;
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(18px, 1.849vw, 22px);
+
+    svg {
+      fill: currentColor;
+      width: 100%;
+      height: auto;
+    }
+
+    @include small-tablet {
+      max-width: 250px;
+      padding: 30px;
+    }
+  }
+
+  &__values {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__value {
+    font-family: var(--font-family2);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 100%;
+    color: rgba(var(--cl-a),1.0);
+  }
+
+  &__name {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(var(--cl-j),1.0);
+  }
+}

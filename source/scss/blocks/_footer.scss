@@ -1,0 +1,19 @@
+
+.footer-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: clamp(30px, 6.364vw, 70px);
+  padding: 60px 0 40px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+  }
+}

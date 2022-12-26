@@ -1,0 +1,66 @@
+.about-card {
+  padding:
+    clamp(24px, 2.689vw, 32px)
+    clamp(24px, 4.202vw, 50px)
+    clamp(24px, 4.202vw, 50px)
+  ;
+  background: rgba(104, 102, 246, 0.08);
+  border-radius: 12px;
+
+  @include gradient-border(var(--gradient-c), 2px);
+
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+
+  &__title {
+    font-family: var(--font-family2);
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(18px, 1.765vw, 21px);
+    line-height: 115%;
+    color: rgba(var(--cl-a),1.0);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+  }
+
+  &__item {
+    grid-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__name {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(var(--cl-f),1.0);
+  }
+
+  &__value {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(14px, 1.345vw, 16px);
+    line-height: 100%;
+    color: rgba(var(--cl-a),1.0);
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+
+    svg {
+      margin: -5px 0;
+    }
+
+    @include ios {
+      text-align: right;
+      justify-content: flex-end;
+    }
+  }
+}

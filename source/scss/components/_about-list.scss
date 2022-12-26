@@ -1,0 +1,92 @@
+.about-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding:
+    clamp(30px, 3.782vw, 45px)
+    clamp(30px, 3.782vw, 45px)
+    clamp(30px, 4.454vw, 53px)
+  ;
+  background: linear-gradient(180deg, #222554 0%, rgba(34, 37, 84, 0) 100%);
+  border-radius: 24px;
+  grid-gap: 25px clamp(25px, 5.042vw, 60px);
+
+  @include mobile {
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 70px;
+  }
+
+  &__name {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(var(--cl-a),1.0);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+
+    &:nth-child(1) {
+      .about-list__value {
+        color: var(--icon-a);
+        background: rgba(rgb(104, 102, 246), 0.1);
+      }
+    }
+    &:nth-child(2) {
+      .about-list__value {
+        color: var(--icon-b);
+        background: rgba(rgb(231, 65, 66), 0.1);
+      }
+    }
+    &:nth-child(3) {
+      .about-list__value {
+        color: var(--icon-c);
+        background: rgba(rgb(45, 216, 74), 0.1);
+      }
+    }
+    &:nth-child(4) {
+      .about-list__value {
+        color: var(--icon-d);
+        background: rgba(rgb(185, 139, 242), 0.1);
+      }
+    }
+    &:nth-child(5) {
+      .about-list__value {
+        color: var(--icon-e);
+        background: rgba(rgb(242, 184, 72), 0.1);
+      }
+    }
+    &:nth-child(6) {
+      .about-list__value {
+        color: var(--icon-f);
+        background: rgba(rgb(34, 158, 120), 0.1);
+      }
+    }
+  }
+
+  &__value {
+    flex-shrink: 0;
+    height: 29px;
+    width: 47px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+
+    font-family: var(--font-family2);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: rgba(var(--cl-a),1.0);
+    background: rgba(rgb(255, 255, 255), 0.1);
+  }
+}

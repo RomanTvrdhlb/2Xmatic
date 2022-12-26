@@ -1,0 +1,29 @@
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background-color: rgba(var(--bg-a),1.0);
+}
+
+.header-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: clamp(30px, 6.364vw, 70px);
+  padding: 30px 0;
+
+
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content{
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+  }
+
+
+}
