@@ -1,28 +1,52 @@
 .wallet-button {
   color: rgba(var(--cl-c),1.0);
-  width: 210px;
-  height: 51px;
+  min-width: 210px;
+  min-height: 51px;
   display: flex;
   align-items: center;
   justify-content: center;
   grid-gap: 10px;
- 
-  font-family: var(--font-family);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 100%;
+  transition: all .4s;
+  
   background: rgba(var(--bg-a),1.0);
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
   border-radius: 22px;
+  &:hover{
+    background: rgba(var(--bg-k),1.0);
+  }
+  &__text{
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+
+    @include tablet{
+      display: none;
+    }
+  }
+
+  @include tablet{
+    min-width: 44px;
+    min-height: 40px;
+    border-radius: 12px;
+  }
+
+  &--mobile{
+    min-width: 192px;
+    min-height: 42px;
+    border-radius: 12px;
+
+    *{
+      display: flex;
+    }
+  }
 }
 
 .main-button {
-
   min-width: 210px;
   min-height: 65px;
   color: rgba(var(--cl-a),1.0);
-
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 700;
@@ -38,10 +62,19 @@
   background-color: rgba(var(--bg-d),1.0);
   transition: all .4s;
 
+  @include mobile{
+    border-radius: 12px;
+  }
+
   &--transparent {
     background-color: transparent;
     color: rgba(var(--cl-b),1.0);
     border: 1px solid var(--br-a);
+
+    &:hover{
+      background-color: rgba(var(--bg-d),1.0);
+      color: rgba(var(--cl-a),1.0);
+    }
   }
 
   &--mode{
@@ -51,6 +84,10 @@
   
   svg{
     fill: currentColor;
+  }
+
+  &:hover{
+    box-shadow: 0px 6px 10px rgba(131, 74, 252, 0.25);
   }
 }
 
@@ -74,13 +111,27 @@ p{
   line-height: 120%;
   color:  rgba(var(--cl-e),1.0);
 
+  @include mobile{
+    text-align: center;
+  }
+}
+
+.country-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img, picture{
+    width: 100%;
+    display: block;
+  }
 }
 
 .main-title{
   font-family: var(--font-family2);
   font-style: normal;
   font-weight: 700;
-  font-size: 50px;
+  font-size: clamp(26px, 4.545vw, 50px);
   line-height: 115%;
   text-align: center;
   text-transform: uppercase;
@@ -96,6 +147,10 @@ p{
   line-height: 120%;
   text-transform: uppercase;
   color:  rgba(var(--cl-b),1.0);
+
+  @include tablet{
+    text-align: center;
+  }
 }
 
 .main-scroll{
@@ -115,25 +170,13 @@ p{
   }
 }
 
-.main-description{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-
-  img,picture{
-    width: 100%;
-    display: block;
-  }
-} 
-
 .card-top{
   &:before{
     position: absolute;
     content: "";
     background: rgba(255, 255, 255, 0.5);
     border-radius: 22px;
-    width: 194px;
+    width: calc(100% - 66px);
     height: 50px;
     top: -10px;
     left: 50%;
@@ -147,6 +190,24 @@ p{
       width: calc(100% - 24px);
     }
   }
+}
+
+.mobile-button{
+  display: flex;
+  align-items: center;
+  min-width: 157px;
+  grid-gap: 6px;
+  justify-content: center;
+  min-height: 50px;
+  background: rgba(var(--bg-h),1.0);
+  border-radius: 12px;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: rgba(var(--cl-c),1.0);
+
 }
 
 .violet-text{

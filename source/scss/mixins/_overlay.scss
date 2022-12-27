@@ -10,7 +10,8 @@
   padding: 20px 20px;
   overflow-y: scroll;
 
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--gradient-bg);
+  backdrop-filter: blur(20px);
   visibility: hidden;
   opacity: 0;
 

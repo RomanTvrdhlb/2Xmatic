@@ -3,14 +3,14 @@ import './components/getDinamicHeight';
 import './components/sliders';
 import './components/copyForm';
 // import './components/initMobileSlider';
-// import './components/burger';
+import './components/burger';
 // import './components/modals';
 // import './components/tabs';
 // import './components/observer';
 // import './components/validate';
 // import './components/inputMask';
 // import './components/select';
-// import './components/replaceEl';
+import './components/replaceEl';
 // import './components/accordions';
 // import './components/anchor';
  

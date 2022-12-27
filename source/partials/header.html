@@ -16,11 +16,14 @@
         </div>
 
         <div class="header-box__content">
+
+          @include('../partials/components/burger.html',{'classMode':''})
+
           <button class="wallet-button">
             <svg width='27' height='23'>
               <use href='img/sprite/sprite.svg#icon1'></use>
             </svg>
-            <span>
+            <span class="wallet-button__text">
               Connect Wallet
             </span>
           </button>
@@ -32,12 +35,147 @@
             </picture>
           </button>
         </div>
-        
 
-        @include('../partials/components/burger.html',{'classMode':''})
+        <div class="mobile-menu">
+          <div class="mobile-menu__top">
+            <a href="#" class="mobile-menu__logo">
+              <svg width='35' height='31'>
+                <use href='img/sprite/sprite.svg#logo2'></use>
+              </svg>
+            </a>
 
+            <button class="wallet-button--mobile wallet-button">
+              <svg width='27' height='23'>
+                <use href='img/sprite/sprite.svg#icon1'></use>
+              </svg>
+              <span class="wallet-button__text">
+                Connect Wallet
+              </span>
+            </button>
 
+            @include('../partials/components/burger.html',{'classMode':''})
+          </div>
+          <div class="mobile-menu__wrapper">
 
+            <ul class="mobile-menu__nav">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#mob1'></use>
+                  </svg>
+                  Investments</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#mob2'></use>
+                  </svg>
+                  How it works</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#mob3'></use>
+                  </svg>
+                  FAQ</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#mob4'></use>
+                  </svg>
+                  Referrals</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#mob5'></use>
+                  </svg>
+                  Contract</a>
+              </li>
+            </ul>
+
+            <div class='mobile-menu__swiper main-swiper'>
+              <div class='main-swiper__container swiper-container'>
+                <ul class='main-swiper__wrapper swiper-wrapper'>
+                  <li class='main-swiper__slide swiper-slide'>
+                    <span class="main-swiper__icon">
+                      <svg width='45' height='10'>
+                        <use href='img/sprite/sprite.svg#slide1'></use>
+                      </svg>
+                    </span>
+                  </li>
+                  <li class='main-swiper__slide swiper-slide'>
+                    <span class="main-swiper__icon">
+                      <svg width='45' height='10'>
+                        <use href='img/sprite/sprite.svg#slide1'></use>
+                      </svg>
+                    </span>
+                  </li>
+                  <li class='main-swiper__slide swiper-slide'>
+                    <span class="main-swiper__icon">
+                      <svg width='45' height='10'>
+                        <use href='img/sprite/sprite.svg#slide1'></use>
+                      </svg>
+                    </span>
+                  </li>
+                  <li class='main-swiper__slide swiper-slide'>
+                    <span class="main-swiper__icon">
+                      <svg width='45' height='10'>
+                        <use href='img/sprite/sprite.svg#slide1'></use>
+                      </svg>
+                    </span>
+                  </li>
+                  <li class='main-swiper__slide swiper-slide'>
+                    <span class="main-swiper__icon">
+                      <svg width='45' height='10'>
+                        <use href='img/sprite/sprite.svg#slide1'></use>
+                      </svg>
+                    </span>
+                  </li>
+                  <li class='main-swiper__slide swiper-slide'>
+                    <span class="main-swiper__icon">
+                      <svg width='45' height='10'>
+                        <use href='img/sprite/sprite.svg#slide1'></use>
+                      </svg>
+                    </span>
+                  </li>
+                  <li class='main-swiper__slide swiper-slide'>
+                    <span class="main-swiper__icon">
+                      <svg width='45' height='10'>
+                        <use href='img/sprite/sprite.svg#slide1'></use>
+                      </svg>
+                    </span>
+                  </li>
+                  <li class='main-swiper__slide swiper-slide'>
+                    <span class="main-swiper__icon">
+                      <svg width='45' height='10'>
+                        <use href='img/sprite/sprite.svg#slide1'></use>
+                      </svg>
+                    </span>
+                  </li>
+                  <li class='main-swiper__slide swiper-slide'>
+                    <span class="main-swiper__icon">
+                      <svg width='45' height='10'>
+                        <use href='img/sprite/sprite.svg#slide1'></use>
+                      </svg>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          <div class="mobile-menu__bottom">
+            <button class="mobile-button"><picture>
+              <source type='image/webp' srcset='img/nav-icon/country.webp'>
+              <img width='24' height='24' src='img/nav-icon/country.png' alt='image'>
+            </picture>
+          EN</button>
+            <button class="mobile-button"><img src="img/sprite/tg.svg" alt="Support">
+              Support</button>
+          </div>
+        </div>
+        </div>
     </div>
   </div>
 </header>

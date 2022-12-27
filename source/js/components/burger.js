@@ -2,26 +2,31 @@ import { disableScroll } from '../functions/disable-scroll';
 import { enableScroll } from '../functions/enable-scroll';
 import vars from '../_vars';
 
-import {addCustomClass, toggleCustomClass, removeCustomClass, removeClassInArray} from '../functions/customFunctions';
+import {toggleClassInArray, toggleCustomClass, removeCustomClass, removeClassInArray} from '../functions/customFunctions';
 const {overlay, burger, mobileMenu, mainLinks} = vars;
 
-const mobileMenuHandler = function(overlay, mobileMenu, burger) {
-  burger.addEventListener('click', function(){
-    toggleCustomClass(mobileMenu,'active');
-    toggleCustomClass(burger,'active');
-    toggleCustomClass(overlay,'active');
 
-    if(burger.classList.contains('active')) {
-      disableScroll()
-    } else {
-      enableScroll()
-    }
+
+
+const mobileMenuHandler = function(overlay, mobileMenu, burger) {
+  burger.map( function(btn){
+    btn.addEventListener('click', function(){
+      toggleCustomClass(mobileMenu, 'active');
+      toggleClassInArray(burger, 'active');
+      toggleCustomClass(overlay, 'active');
+
+      if(btn.classList.contains('active')){
+        disableScroll()
+      } else{
+        enableScroll()
+      }
+    })
   })
 }
 
 const hideMenuHandler = function(overlay, mobileMenu, burger) {
     removeCustomClass(mobileMenu,'active');
-    removeCustomClass(burger,'active');
+    removeClassInArray(burger,'active');
     removeCustomClass(overlay,'active');
     enableScroll()
 }

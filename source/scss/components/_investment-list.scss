@@ -1,13 +1,31 @@
 .investment-list{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: clamp(5px, 1.818vw, 20px);
+    grid-gap: clamp(10px, 1.818vw, 20px);
+
+    @include tablet{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include small-tablet{
+        grid-template-columns: repeat(2 ,1fr);
+    }
+    @include mobile{
+        grid-template-columns: 100%;
+    }
 
     &__item{
-
-
+        min-height: 83px;
         &--mode{
             grid-column: span 2;
+            @include tablet{
+                grid-column:  span 3;
+            }
+            @include small-tablet{
+                grid-column: span 2;
+            }
+            @include mobile{
+                grid-column: initial;
+            }
         }
     }
 }

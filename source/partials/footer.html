@@ -16,11 +16,14 @@
       </div>
 
       <div class="footer-box__content">
+
+        @include('../partials/components/burger.html',{'classMode':''})
+
         <button class="wallet-button">
           <svg width='27' height='23'>
             <use href='img/sprite/sprite.svg#icon1'></use>
           </svg>
-          <span>
+          <span class="wallet-button__text">
             Connect Wallet
           </span>
         </button>
@@ -37,9 +40,9 @@
 
 </footer>
 
-<!-- <div class="overlay" data-overlay>
+<div class="overlay" data-overlay>
 
-    <div class="modal" data-popup="1">
+    <!-- <div class="modal" data-popup="1">
         <div class="modal__box" role="dialog" aria-modal="true">
           <button class="close modal__close" aria-label="Закрыть модальное окно">
             <svg width='15' height='15'>
@@ -156,6 +159,6 @@
               Заявка успешно отправлена!
             </p>
         </div>
-    </div>
+    </div> -->
 
-</div> -->
+</div>

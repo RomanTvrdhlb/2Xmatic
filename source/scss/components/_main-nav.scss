@@ -4,6 +4,10 @@
     display: flex;
     align-items: center;
     grid-gap: 32px;
+
+    @include laptop{
+      grid-gap: 15px;
+    }
   }
 
   &__item {
@@ -21,6 +25,7 @@
     color: inherit;
     display: flex;
     align-items: center;
+    white-space: nowrap;
     grid-gap: 6px;
   }
 

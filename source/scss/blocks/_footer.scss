@@ -9,6 +9,10 @@
   &__inner {
     display: flex;
     align-items: center;
+
+    @include tablet{
+      display: none;
+    }
   }
 
   &__content {

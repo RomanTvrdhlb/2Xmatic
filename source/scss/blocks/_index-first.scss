@@ -1,9 +1,13 @@
 .index-first{
-    padding: 69px 0 92px;
+    padding: 69px 0 clamp(80px, 8.364vw, 92px);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: clamp(20px, 5.455vw, 60px);
+
+    @include tablet{
+        margin: 0;
+    }
     
     &__box{
         display: flex;
@@ -16,26 +20,32 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        grid-gap: 10px;
+        grid-gap: clamp(5px, 0.909vw, 10px);
        
     }
 
     &__inner{
         display: grid;
         grid-template-columns: repeat(2, auto);
-        grid-gap: 30px;
+        grid-gap: clamp(10px, 2.727vw, 30px);
         justify-items: center;
         padding-top: 16px;
 
         .main-scroll{
             grid-column: span 2;
+            @include mobile{
+                display: none;
+            }
+        }
+
+        @include mobile{
+            grid-template-columns: 100%;
+            width: 100%;
+            .main-button{
+                width: 100%;
+            }
         }
     }
 
-    &__buttons{
-        display: flex;
-        align-items: center;
-        grid-gap: 20px;
-        justify-content: center;
-    }
+
 }

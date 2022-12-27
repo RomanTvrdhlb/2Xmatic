@@ -2,8 +2,8 @@
     position: relative;
     border-radius: 12px;
     background-color: rgba(var(--bg-a),1.0);
-    max-width: 280px;
-    min-height: Min(10.545vw, 116px);
+  
+    min-height: 116px;
     padding-top: 25px;
 
     &__name{
@@ -37,6 +37,11 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center center;
+
+            @include mobile{
+                width: 280px;
+                height: 6px;
+            }
         }
 
         &-value{

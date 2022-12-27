@@ -1,20 +1,7 @@
 /* stylelint-disable */
-.burger {
-  display: none;
-
-  // @include tablet {
-  //   display: flex;
-  //   order: 3;
-  //   @include burger;
-  //   position: relative;
-  //   z-index: 101;
-  // }
-}
-
-
 
 @mixin burger {
-  --burger-width: 30px;
+  --burger-width: 25px;
   --burger-height: 20px;
   --burger-line-height: 3px;
   --border-radius: 3px;
@@ -78,5 +65,15 @@
       transform: scale(0);
       transition: transform 0.3s ease-in-out;
     }
+  }
+}
+
+.burger {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    @include burger;
+    position: relative;
   }
 }

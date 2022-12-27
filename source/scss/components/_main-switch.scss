@@ -5,6 +5,10 @@
     grid-gap: 10px;
     justify-content: flex-end;
 
+    @include mobile{
+        justify-content: center;
+    }
+
     &__item{
         font-family: var(--font-family);
         font-style: normal;

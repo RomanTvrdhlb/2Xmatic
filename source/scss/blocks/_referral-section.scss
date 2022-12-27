@@ -3,12 +3,21 @@
 
     &__box{
         display: grid;
-        grid-template-columns: Min(52.727vw,580px) 1fr;
+        grid-template-columns: minmax(400px, 580px) 1fr;
         grid-gap: clamp(25px, 4.091vw, 45px) clamp(40px, 6.636vw, 73px);
 
-
         .pre-title{
-            grid-column: span 2 ;
+            grid-column: span 2;
+
+            @include tablet{
+                grid-column: initial;
+                padding-bottom: 25px;
+            }
+        }
+
+        @include tablet{
+            grid-template-columns: 100%;
+            grid-gap: 30px;
         }
     }
 
@@ -16,11 +25,14 @@
         display: flex;
         flex-direction: column;
         grid-gap: 20px;
+
+       
     }
 
     &__content{
          display: flex;
          flex-direction: column;
+         grid-gap: 40px;
          justify-content: flex-end;
          position: relative;
         z-index: 0;
@@ -29,8 +41,8 @@
             z-index: -1;
             position: absolute;
             content: "";
-            width: Min(40.545vw,446px);
-            height:Min(29.545vw, 325px);
+            width:  clamp(300px, 40.545vw, 446px);
+            height: clamp(200px, 29.545vw, 325px);
             background-image: url(/img/icons/img1.png);
             background-position: center center;
             background-repeat: no-repeat;
@@ -38,6 +50,16 @@
             top: 0;
             left: -25px;
             transform: translateY(-41%);
+
+            @include laptop{
+                left: -15%;
+                top: 5%;
+                height: 275px;
+            }
+
+            @include tablet{
+                display: none;
+            }
         }
     }
 }

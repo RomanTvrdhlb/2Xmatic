@@ -1,0 +1,17 @@
+.main-swiper{
+
+    width: 670px;
+
+    &__wrapper{
+        -webkit-transition-timing-function: linear !important;
+        transition-timing-function: linear !important;
+    }
+
+    &__slide{
+        width: 79px;
+    }
+
+    @include small-tablet{
+        display: none;
+    }
+}

@@ -11,27 +11,28 @@
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
 // --------------- default JS variable ---------------
-  --header-height: 77px;
+  --header-height: 111px;
+  --mobile-top-height: 42px;
 // --------------- default JS tablet variable ---------------
   @media (max-width: 1024px) {
-    --header-height: 66px;
+    --header-height: 96px;
   }
 
 // --------------- default JS small-tablet variable ---------------
-  @media (max-width: 767px) {
-    --header-height:87px;
+  @media (max-width: 768px) {
+    --header-height:82px;
   }
 
 // --------------- default JS mobile variable ---------------
   @media (max-width: 576px) {
-    --header-height:62px;
+    --header-height:71px;
   }
 
 // --------------- default scroll variable ---------------
   --scrollbar-thumb: #fff;
   --scrollbar-thumb-hover: #fff;
-  --scrollbar-track:  #6866F6;
-  --scrollbar-track-hover: #6866F6;
+  --scrollbar-track:  #824afcad;
+  --scrollbar-track-hover: #824afcad;
   --overlay-bg: rgba(0, 0, 0, 0.5);
 
 // --------------- default slect variable ---------------
@@ -71,6 +72,7 @@
   --bg-h: #{HexToRGB(#F7F7F8)}; // rgba(var(--bg-h),1.0);
   --bg-i: #{HexToRGB(#FEEEDF)}; // rgba(var(--bg-i),1.0);
   --bg-j: #{HexToRGB(#EBE2FF)}; // rgba(var(--bg-j),1.0);
+  --bg-k: #{HexToRGB(#EEEEF2)}; // rgba(var(--bg-k),1.0);
 
 
 
@@ -84,7 +86,7 @@
 // --------------- gradient background cl variable ---------------
 
   --gradient-bg: radial-gradient(34.76% 133.29% at 57.92% 58.41%, rgba(131, 74, 252, 0.3) 0%, rgba(131, 74, 252, 0) 100%),radial-gradient(86.82% 142.13% at 89.97% 36.76%, rgba(131, 74, 252, 0.3) 0%, rgba(131, 74, 252, 0) 100%),linear-gradient(100.05deg, rgba(131, 74, 252, 0.3) 28.28%, rgba(45, 143, 234, 0.3) 53.98%);
-
+  --gradient-bg2: linear-gradient(93.43deg, #834AFC 0%, #A175FF 100%);
 
 // --------------- icon background cl variable ---------------
 

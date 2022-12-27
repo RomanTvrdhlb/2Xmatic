@@ -1,28 +1,5 @@
 .how-section{
     
-
-    .section-wrapper{ 
-        &::after{
-            position: absolute;
-            content: '';
-            width: clamp(75px, 7.091vw, 78px);
-            height: clamp(54px, 6.364vw, 70px);
-            background-image: url(/img/icons/img2.png);
-            top: 10px;
-            left: 2px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-
-        @include mobile{
-            &:after{
-            top:0;
-            transform: translateY(-80%);
-        }
-    }
-    }
-
     &__box{
         display: flex;
         flex-direction: column;

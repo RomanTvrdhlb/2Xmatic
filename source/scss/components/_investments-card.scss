@@ -1,5 +1,5 @@
 .investments-card{
-    min-height: Min(35.273vw, 388px);
+    min-height: clamp(358px, 35.273vw, 388px);
     padding: 30px 20px;
     position: relative;
     display: flex;
@@ -13,8 +13,6 @@
     &--mode{
         padding: 14px 20px 22px;
     }
-
-    min-width: 260px;
 
     &__top{
         position: relative;

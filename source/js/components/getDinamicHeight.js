@@ -1,9 +1,9 @@
 import vars from '../_vars';
 import { elementHeight } from '../functions/customFunctions';
 
-const {header,headerTop,headerBottom} = vars;
+const {header,mobileTop} = vars;
 
 elementHeight(header, "header-height");
-elementHeight(headerTop, "header-top-height");
-elementHeight(headerBottom, "header-bottom-height");
+elementHeight(mobileTop, "mobile-top-height");
+
 

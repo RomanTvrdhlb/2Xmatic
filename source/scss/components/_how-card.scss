@@ -7,9 +7,12 @@
     display: flex;
     flex-direction: column;
     grid-gap: 10px;
-    max-width: 260px;
-    min-height: clamp(334px, 33.545vw, 369px);
+    min-height: clamp(341px, 33.545vw, 369px);
     align-items: center;
+
+    @include mobile{
+        max-width: 310px;
+    }
 
     &__title{
         font-family: var(--font-family2);

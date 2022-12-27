@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     grid-gap: 8px;
-    padding: clamp(13px, 2.091vw, 23px) clamp(12px, 2.182vw, 24px);
+    padding: clamp(20px, 2.091vw, 23px) 24px;
     background: rgba(var(--bg-a),1.0);
     border-radius: 12px;
     position: relative;
@@ -14,7 +14,7 @@
         font-family: var(--font-family);
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: clamp(14px, 1.455vw, 16px);
         line-height: 120%;
         color: rgba(var(--cl-e),1.0);
     }
@@ -23,7 +23,7 @@
         font-family: var(--font-family2);
         font-style: normal;
         font-weight: 600;
-        font-size: 18px;
+        font-size: clamp(16px, 1.636vw, 18px);
         line-height: 120%;
         color: rgba(var(--cl-c),1.0);
         max-width: 148px;
@@ -38,12 +38,31 @@
         transform: translateY(-50%);
         right: 0;
 
+        @include mobile{
+            transform: translateY(-47%);
+            img,picture{
+                width: 90px;
+            }
+        }
+        
         &--mode{
             width: 80px;
             transform: translate(34%, -50%);
             img, picture{
                 width: 100%;
                 display: block;
+            }
+            @include mobile{
+                width: 111px;
+                transform: translate(24%,-55%);
+            }
+        }
+
+        &--small{
+            @include mobile{
+                img,picture{
+                    width: 70px;
+                }
             }
         }
     }
@@ -56,8 +75,8 @@
         font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: clamp(16px, 1.636vw, 18px);
+        line-height: 120%;
         display: flex;
         align-items: center;
         grid-gap: 4px;
@@ -75,8 +94,11 @@
             content: "";
             width: 23px;
             height: 24px;
-            background-image: url(/img/sprite/line.svg);
-            left: calc((var(--icon-margin) + 8px) * -1);
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1-4v21.7C1 20 2.3 22 4 22h15' stroke='%23E0E2E7' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            left: calc(var(--icon-margin) * -1);
             top: 0;
         }
 
@@ -109,7 +131,9 @@
             fill: currentColor;
             transition: transparent;
         }
-
+        &:hover{
+            box-shadow: 0px 6px 10px rgba(131, 74, 252, 0.25);
+          }
 
     }
 

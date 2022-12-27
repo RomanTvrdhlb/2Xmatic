@@ -13,12 +13,15 @@ export default {
   modalsButton: [...document.querySelectorAll("[data-btn-modal]")],
   // innerButtonModal: [...document.querySelectorAll("[data-btn-inner]")],
   // customSelect: [...document.querySelectorAll("[data-select]")],
-  burger: document.querySelector('.burger'),
-  mobileMenu: document.querySelector('.header-box__nav'),
+  burger: [...document.querySelectorAll('.burger')],
+  mobileMenu: document.querySelector('.mobile-menu'),
   header: document.querySelector(".header"),
 
   // default variables
-
+  referralBtn : document.querySelector('[data-referral]'),
+  referralCards: document.querySelector('.referral-section__inner'),
+  referralForm: document.querySelector('.referral-section__content'),
+  mobileTop: document.querySelector('.mobile-menu__top'),
 
   defaultSliders: [...document.querySelectorAll('.slider-line')],
   logoSlider: [...document.querySelectorAll('.payment-slider .swiper-container')],

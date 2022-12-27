@@ -71,6 +71,19 @@
   }
 }
 
+@mixin wrapper-color($background) {
+  position: relative;
+  &::after {
+    z-index: -1;
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: #{$background};
+  }
+}
+
 // @mixin fix-offset($offset-value-top, $offset-value-bottom,  $offset-value){
 //   padding: $offset-value-top $offset-value $offset-value-bottom;
 //   margin: $offset-value-top  calc($offset-value * -1) $offset-value-bottom;

@@ -13,19 +13,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sliders */ "./source/js/components/sliders.js");
 /* harmony import */ var _components_copyForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/copyForm */ "./source/js/components/copyForm.js");
 /* harmony import */ var _components_copyForm__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_copyForm__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/burger */ "./source/js/components/burger.js");
+/* harmony import */ var _components_replaceEl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/replaceEl */ "./source/js/components/replaceEl.js");
 
 // import './components/stickyHeader';
 
 
 // import './components/initMobileSlider';
-// import './components/burger';
+
 // import './components/modals';
 // import './components/tabs';
 // import './components/observer';
 // import './components/validate';
 // import './components/inputMask';
 // import './components/select';
-// import './components/replaceEl';
+
 // import './components/accordions';
 // import './components/anchor';
 
@@ -54,11 +56,14 @@ __webpack_require__.r(__webpack_exports__);
   modalsButton: [...document.querySelectorAll("[data-btn-modal]")],
   // innerButtonModal: [...document.querySelectorAll("[data-btn-inner]")],
   // customSelect: [...document.querySelectorAll("[data-select]")],
-  burger: document.querySelector('.burger'),
-  mobileMenu: document.querySelector('.header-box__nav'),
+  burger: [...document.querySelectorAll('.burger')],
+  mobileMenu: document.querySelector('.mobile-menu'),
   header: document.querySelector(".header"),
   // default variables
-
+  referralBtn: document.querySelector('[data-referral]'),
+  referralCards: document.querySelector('.referral-section__inner'),
+  referralForm: document.querySelector('.referral-section__content'),
+  mobileTop: document.querySelector('.mobile-menu__top'),
   defaultSliders: [...document.querySelectorAll('.slider-line')],
   logoSlider: [...document.querySelectorAll('.payment-slider .swiper-container')],
   mainLinks: [...document.querySelectorAll('.main-nav__link')],
@@ -89,6 +94,66 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+/***/ }),
+
+/***/ "./source/js/components/burger.js":
+/*!****************************************!*\
+  !*** ./source/js/components/burger.js ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/disable-scroll */ "./source/js/functions/disable-scroll.js");
+/* harmony import */ var _functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/enable-scroll */ "./source/js/functions/enable-scroll.js");
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../_vars */ "./source/js/_vars.js");
+/* harmony import */ var _functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../functions/customFunctions */ "./source/js/functions/customFunctions.js");
+
+
+
+
+const {
+  overlay,
+  burger,
+  mobileMenu,
+  mainLinks
+} = _vars__WEBPACK_IMPORTED_MODULE_2__["default"];
+const mobileMenuHandler = function (overlay, mobileMenu, burger) {
+  burger.map(function (btn) {
+    btn.addEventListener('click', function () {
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(mobileMenu, 'active');
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleClassInArray)(burger, 'active');
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(overlay, 'active');
+      if (btn.classList.contains('active')) {
+        (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
+      } else {
+        (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
+      }
+    });
+  });
+};
+const hideMenuHandler = function (overlay, mobileMenu, burger) {
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(mobileMenu, 'active');
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(burger, 'active');
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(overlay, 'active');
+  (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
+};
+if (burger) {
+  mainLinks.map(function (item) {
+    item.addEventListener('click', function () {
+      hideMenuHandler(overlay, mobileMenu, burger);
+    });
+  });
+}
+if (overlay) {
+  mobileMenuHandler(overlay, mobileMenu, burger);
+  overlay.addEventListener('click', function (e) {
+    if (e.target.classList.contains('overlay')) {
+      hideMenuHandler(overlay, mobileMenu, burger);
+    }
+  });
+}
 
 /***/ }),
 
@@ -133,12 +198,47 @@ __webpack_require__.r(__webpack_exports__);
 
 const {
   header,
-  headerTop,
-  headerBottom
+  mobileTop
 } = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
 (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.elementHeight)(header, "header-height");
-(0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.elementHeight)(headerTop, "header-top-height");
-(0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.elementHeight)(headerBottom, "header-bottom-height");
+(0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.elementHeight)(mobileTop, "mobile-top-height");
+
+/***/ }),
+
+/***/ "./source/js/components/replaceEl.js":
+/*!*******************************************!*\
+  !*** ./source/js/components/replaceEl.js ***!
+  \*******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./source/js/_vars.js");
+
+const {
+  referralBtn,
+  referralCards,
+  referralForm
+} = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
+const replaceElementsFunction = (element, parentDesktop, parentMobile, breakpoint, firstRule, lastRule) => {
+  let containerWidth = document.documentElement.clientWidth;
+  if (element) {
+    if (containerWidth <= `${breakpoint}`) {
+      parentMobile.insertAdjacentElement(`${firstRule}`, element);
+    }
+    ;
+    if (containerWidth > `${breakpoint}`) {
+      parentDesktop.insertAdjacentElement(`${lastRule}`, element);
+    }
+  }
+};
+window.addEventListener('resize', () => {
+  replaceElementsFunction(referralBtn, referralCards, referralForm, 1024, 'beforeend', 'beforeend'); // repalce button on mobile version
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  replaceElementsFunction(referralBtn, referralCards, referralForm, 1024, 'beforeend', 'beforeend'); // repalce button on mobile version
+});
 
 /***/ }),
 
@@ -159,37 +259,54 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const {
-  defaultSliders
-} = _vars__WEBPACK_IMPORTED_MODULE_1__["default"];
-function initLineSlider(slider, direction) {
-  function startSlider() {
-    const swiper = new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(slider && slider, {
-      slidesPerView: 'auto',
-      spaceBetween: 40,
-      centeredSlides: true,
-      observer: true,
-      observeParents: true,
-      loop: true,
-      speed: 10000,
-      autoplay: {
-        delay: 0,
-        reverseDirection: direction
-      },
-      breakpoints: {
-        320: {
-          spaceBetween: 30
-        },
-        576: {
-          spaceBetween: 40
-        }
-      }
-    });
-  }
-  window.addEventListener('resize', (0,_functions_throttle__WEBPACK_IMPORTED_MODULE_2__.throttle)(startSlider));
-  window.addEventListener('DOMContentLoaded', startSlider);
-}
-defaultSliders.map((defaultSlider, index) => (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.even)(index + 1) ? initLineSlider(defaultSlider, false) : initLineSlider(defaultSlider, true));
+
+// const {defaultSliders} = vars;
+
+// function initLineSlider(slider,direction) {
+
+//   function startSlider() {
+//     const swiper = new Swiper(slider && slider, {
+//       slidesPerView: 'auto',
+//       spaceBetween: 40,
+//       centeredSlides: true,
+//       observer: true,
+//       observeParents: true,
+//       loop: true,
+//       speed: 10000,
+//       autoplay: {
+//         delay: 0,
+//         reverseDirection: direction,
+//       },
+//       breakpoints: {
+//         320: {
+//           spaceBetween: 30,
+//         },
+//         576: {
+//           spaceBetween: 40,
+//         },
+//       },
+//     });
+//   }
+
+//   window.addEventListener('resize', throttle(startSlider));
+//   window.addEventListener('DOMContentLoaded', startSlider);
+
+// }
+
+// defaultSliders.map((defaultSlider, index) => even(index + 1) ? initLineSlider(defaultSlider,false) : initLineSlider(defaultSlider,true))
+
+const hiddenSliders = [...document.querySelectorAll('.main-swiper__container')];
+hiddenSliders.map(function (slider) {
+  const headerSwiper = new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(slider, {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    loop: true,
+    speed: 3000,
+    autoplay: {
+      delay: 0
+    }
+  });
+});
 
 /***/ }),
 
@@ -254,6 +371,75 @@ const elementHeight = (el, variableName) => {
     window.addEventListener('DOMContentLoaded', initListener);
     window.addEventListener('resize', initListener);
   }
+};
+
+/***/ }),
+
+/***/ "./source/js/functions/disable-scroll.js":
+/*!***********************************************!*\
+  !*** ./source/js/functions/disable-scroll.js ***!
+  \***********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "disableScroll": function() { return /* binding */ disableScroll; }
+/* harmony export */ });
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./source/js/_vars.js");
+
+const {
+  bodyEl,
+  htmlEl
+} = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
+const disableScroll = () => {
+  const fixBlocks = document?.querySelectorAll('.fixed-block');
+  const pagePosition = window.scrollY;
+  const paddingOffset = `${window.innerWidth - _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.offsetWidth}px`;
+  htmlEl.style.scrollBehavior = 'none';
+  fixBlocks.forEach(el => {
+    el.style.paddingRight = paddingOffset;
+  });
+  bodyEl.style.paddingRight = paddingOffset;
+  bodyEl.classList.add('dis-scroll');
+  bodyEl.dataset.position = pagePosition;
+  bodyEl.style.top = `-${pagePosition}px`;
+
+  // console.log(paddingOffset)
+};
+
+/***/ }),
+
+/***/ "./source/js/functions/enable-scroll.js":
+/*!**********************************************!*\
+  !*** ./source/js/functions/enable-scroll.js ***!
+  \**********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "enableScroll": function() { return /* binding */ enableScroll; }
+/* harmony export */ });
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./source/js/_vars.js");
+
+const {
+  bodyEl
+} = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
+const enableScroll = () => {
+  const fixBlocks = document?.querySelectorAll('.fixed-block');
+  const body = document.body;
+  const pagePosition = parseInt(bodyEl.dataset.position, 10);
+  fixBlocks.forEach(el => {
+    el.style.paddingRight = '0px';
+  });
+  bodyEl.style.paddingRight = '0px';
+  bodyEl.style.top = 'auto';
+  bodyEl.classList.remove('dis-scroll');
+  window.scroll({
+    top: pagePosition,
+    left: 0
+  });
 };
 
 /***/ }),

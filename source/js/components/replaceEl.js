@@ -1,6 +1,6 @@
 import vars from '../_vars';
 
-const {headerTopInner,headerBottomInner,headerSearchForm,headerBottomButtons,} = vars
+const {referralBtn,referralCards,referralForm} = vars
 
 
 const replaceElementsFunction = (element,parentDesktop,parentMobile,breakpoint, firstRule, lastRule) => {
@@ -17,12 +17,10 @@ const replaceElementsFunction = (element,parentDesktop,parentMobile,breakpoint, 
 }
 
   window.addEventListener('resize', () => {
-    replaceElementsFunction(headerSearchForm,headerTopInner,headerBottomInner, 1024,'afterbegin','afterbegin'); // repalce search form on mobile version
-    replaceElementsFunction(headerBottomButtons,headerBottomInner,headerTopInner, 1024,'afterbegin','afterbegin'); // repalce buttons on mobile version
+    replaceElementsFunction(referralBtn,referralCards,referralForm, 1024,'beforeend','beforeend'); // repalce button on mobile version
   });
   window.addEventListener('DOMContentLoaded', () => {
-    replaceElementsFunction(headerSearchForm,headerTopInner,headerBottomInner, 1024,'afterbegin','afterbegin'); // repalce search form on mobile version
-    replaceElementsFunction(headerBottomButtons,headerBottomInner,headerTopInner, 1024,'afterbegin','afterbegin'); // repalce buttons on mobile version
+    replaceElementsFunction(referralBtn,referralCards,referralForm, 1024,'beforeend','beforeend'); // repalce button on mobile version
   });
 
 
