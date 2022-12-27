@@ -1944,8 +1944,8 @@ p {
 .mobile-menu__top {
   padding: 8px 17px;
   position: absolute;
-  width: 100vw;
   top: 0;
+  width: 0;
   left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1958,6 +1958,8 @@ p {
       -ms-flex-align: center;
           align-items: center;
   background: rgba(var(--bg-a), 1);
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
 }
 .mobile-menu__swiper {
   display: inline;
@@ -2079,6 +2081,9 @@ p {
 .mobile-menu.active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+.mobile-menu.active .mobile-menu__top {
+  width: 100vw;
 }
 
 .invest-card {
