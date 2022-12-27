@@ -1,0 +1,17 @@
+.how-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    @include tablet{
+        grid-template-columns: repeat(2, 260px);
+        justify-content: center;
+    }
+
+    @include mobile{
+        grid-template-columns: 100%;
+        justify-items: center;
+    }
+
+
+}

@@ -1,9 +1,43 @@
 .referral-section{
-
+        margin-bottom: 60px;
 
     &__box{
+        display: grid;
+        grid-template-columns: Min(52.727vw,580px) 1fr;
+        grid-gap: clamp(25px, 4.091vw, 45px) clamp(40px, 6.636vw, 73px);
+
+
+        .pre-title{
+            grid-column: span 2 ;
+        }
+    }
+
+    &__inner{
         display: flex;
         flex-direction: column;
-        grid-gap: clamp(25px, 4.091vw, 45px);
+        grid-gap: 20px;
+    }
+
+    &__content{
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+         position: relative;
+        z-index: 0;
+
+         &::before{
+            z-index: -1;
+            position: absolute;
+            content: "";
+            width: Min(40.545vw,446px);
+            height:Min(29.545vw, 325px);
+            background-image: url(/img/icons/img1.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: 0;
+            left: -25px;
+            transform: translateY(-41%);
+        }
     }
 }

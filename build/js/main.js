@@ -11,8 +11,11 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_getDinamicHeight__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/getDinamicHeight */ "./source/js/components/getDinamicHeight.js");
 /* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sliders */ "./source/js/components/sliders.js");
+/* harmony import */ var _components_copyForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/copyForm */ "./source/js/components/copyForm.js");
+/* harmony import */ var _components_copyForm__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_copyForm__WEBPACK_IMPORTED_MODULE_2__);
 
 // import './components/stickyHeader';
+
 
 // import './components/initMobileSlider';
 // import './components/burger';
@@ -86,6 +89,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+/***/ }),
+
+/***/ "./source/js/components/copyForm.js":
+/*!******************************************!*\
+  !*** ./source/js/components/copyForm.js ***!
+  \******************************************/
+/***/ (function() {
+
+const parrent = [...document.querySelectorAll('.copy-form')];
+function copyFunction(textInput) {
+  textInput.select();
+  document.execCommand("copy");
+}
+parrent.map(function (item) {
+  const currentInput = item.querySelector('.copy-form__input');
+  const currentButton = item.querySelector('.copy-form__button');
+  currentButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    copyFunction(currentInput);
+  });
+});
+const removeClassInArray = (arr, customClass) => {
+  arr.map(item => {
+    item.classList.remove(customClass);
+  });
+};
 
 /***/ }),
 

@@ -1,6 +1,7 @@
 import './components/getDinamicHeight';
 // import './components/stickyHeader';
 import './components/sliders';
+import './components/copyForm';
 // import './components/initMobileSlider';
 // import './components/burger';
 // import './components/modals';
@@ -12,6 +13,7 @@ import './components/sliders';
 // import './components/replaceEl';
 // import './components/accordions';
 // import './components/anchor';
+ 
 
 
 

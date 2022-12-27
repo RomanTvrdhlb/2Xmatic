@@ -1,5 +1,5 @@
 // ----------------- MAIN COMPONENTS -----------------
-// @import "components/main-top.scss";
+@import "components/main-top.scss";
 @import "components/main-nav.scss";
 // ----------------- MAIN COMPONENTS -----------------
 
@@ -17,6 +17,10 @@
 @import "components/investments-card.scss";
 @import "components/referral-card.scss";
 @import "components/referral-list.scss";
+@import "components/referral-copy.scss";
+@import "components/copy-form.scss";
+@import "components/how-list.scss";
+@import "components/how-card.scss";
 
 // ----------------- BLOCK COMPONENTS -----------------
 

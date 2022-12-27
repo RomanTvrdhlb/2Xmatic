@@ -48,6 +48,10 @@
     border-radius: 12px;
     min-height: 55px;
   }
+  
+  svg{
+    fill: currentColor;
+  }
 }
 
 .main-label{
@@ -88,7 +92,7 @@ p{
   font-family: var(--font-family2);
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
+  font-size: clamp(26px, 3.636vw, 40px);
   line-height: 120%;
   text-transform: uppercase;
   color:  rgba(var(--cl-b),1.0);
@@ -120,6 +124,28 @@ p{
   img,picture{
     width: 100%;
     display: block;
+  }
+} 
+
+.card-top{
+  &:before{
+    position: absolute;
+    content: "";
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 22px;
+    width: 194px;
+    height: 50px;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &--mode{
+    &:before{
+      width: calc(100% - 24px);
+    }
   }
 }
 

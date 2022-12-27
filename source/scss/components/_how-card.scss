@@ -1,0 +1,32 @@
+.how-card{
+
+    background: rgba(var(--bg-a),1.0);
+    border-radius: 22px;
+    position: relative;
+    padding: 40px 24px 40px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    max-width: 260px;
+    min-height: clamp(334px, 33.545vw, 369px);
+    align-items: center;
+
+    &__title{
+        font-family: var(--font-family2);
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(16px, 1.636vw, 18px);
+        line-height: 120%;
+        text-transform: uppercase;
+        color: rgba(var(--bg-b),1.0);
+    }
+
+    p{
+        text-align: center;
+    }
+
+    &__image{
+        padding-bottom: 10px;
+        min-height: 115px;
+    }
+}

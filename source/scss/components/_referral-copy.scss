@@ -1,0 +1,14 @@
+.referral-copy{
+    width: 100%;
+    background: rgba(var(--bg-a),1.0);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    position: relative;
+
+    @include mobile{
+        padding: 20px 24px;
+    }
+}
