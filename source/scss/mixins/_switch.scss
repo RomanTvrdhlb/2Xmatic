@@ -2,8 +2,8 @@
 
     position: relative;
     display: inline-block;
-    width: 46px;
-    height: 24px;
+    min-width: 46px;
+    min-height: 24px;
  
   .switch input {
     opacity: 0;

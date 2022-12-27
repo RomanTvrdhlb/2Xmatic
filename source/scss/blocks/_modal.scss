@@ -1,0 +1,55 @@
+.modal{
+    max-width: 741px;
+    overflow: hidden;
+    &__box{
+        padding-top: clamp(20px, 2.727vw, 30px);
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+        background-image: url(/img/modal-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top left;
+        border-radius: 22px;
+        @include gradient-border(linear-gradient(99.48deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), 1px);
+       
+    }
+
+    &__top{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        grid-gap: clamp(16px, 2.364vw, 26px);
+        position: relative;
+       
+    }
+
+    &__swiper{
+        width: 100%;
+        transform: rotate(-1deg);
+        display: inline;
+        @include mobile{
+            .main-swiper__slide{
+                width: 45px;
+            }
+        .main-swiper__icon{
+          
+                svg{
+                width: 45px;
+                height: 10px;
+           
+           }
+        }
+        }
+    }
+
+    &__close{
+        position: absolute;
+         top: -6px;
+         left: 20px;
+
+        @include small-tablet{
+            left: 16px;
+        }
+    }
+}

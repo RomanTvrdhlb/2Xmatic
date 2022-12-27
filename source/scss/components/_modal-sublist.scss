@@ -1,0 +1,38 @@
+.modal-sublist{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 12px;
+    padding: 13px 24px; 
+    align-items: center;
+    grid-gap: 60px;
+    min-width: 701px;
+    
+
+    &--mode{
+        background: rgba(var(--bg-h),1.0);
+        
+    }   
+
+    &__user{
+        display: inline-block;
+        max-width: 94px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__item{
+        font-family: var(--font-family2);
+        font-style: normal; 
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        color: rgba(var(--cl-e),1.0);
+    }
+
+    &__amount{
+        display: flex;
+        align-items: center;
+        grid-gap: 7px;
+    }
+
+}

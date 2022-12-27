@@ -33,5 +33,9 @@
         border-radius: 12px;
         min-height: 51px;
         min-width: 161px;
+
+        @include mobile{
+            min-width: 124px;
+        }
     }
 }

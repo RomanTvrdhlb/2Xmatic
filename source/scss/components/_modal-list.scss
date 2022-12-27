@@ -1,0 +1,12 @@
+.modal-list{
+    background: #FFFFFF;
+    border-radius: 22px;
+    padding: clamp(20px, 3.636vw, 40px) clamp(14px, 1.818vw, 20px) 60px;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+
+    @include small-tablet{
+        border-radius: 12px;
+    }
+}

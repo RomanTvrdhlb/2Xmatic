@@ -265,6 +265,12 @@ input[type="number"] {
   }
 }
 
+[data-btn-modal]{
+  svg{
+    pointer-events: none;
+  }
+}
+
 
 .dis-scroll {
   position: fixed;

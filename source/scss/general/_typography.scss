@@ -216,3 +216,49 @@ p{
   font-family: inherit;
   color: rgba(var(--cl-d),1.0);
 }
+
+.status-btn{
+  display: flex;
+  align-items: center;
+  grid-gap: 4px;
+  color: rgba(var(--cl-f),1.0);
+  background: rgba(var(--bg-l),1.0);
+  border-radius: 70px;
+  padding: 8px 12px;
+  font-family: var(--font-family2);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+
+  svg{
+    fill:currentColor;  
+  }
+
+
+  &--cancel{
+    color: rgba(var(--cl-h),1.0);
+    background: rgba(var(--bg-m),1.0);
+  }
+}
+
+.modal-button{
+  max-width: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family2);
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(18px, 2.182vw, 24px);
+  line-height: 150%;
+  text-transform: uppercase;
+  color: rgba(var(--cl-a),1.0);
+  background: linear-gradient(93.43deg, #834AFC 0%, #A175FF 100%);
+  border-radius: 80px;
+  padding: clamp(16px, 1.636vw, 18px) clamp(26px, 3.636vw, 40px);
+
+  svg{
+    fill:currentColor;  
+  }
+}
