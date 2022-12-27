@@ -4,7 +4,7 @@ import './components/sliders';
 import './components/copyForm';
 // import './components/initMobileSlider';
 import './components/burger';
-// import './components/modals';
+import './components/modals';
 // import './components/tabs';
 // import './components/observer';
 // import './components/validate';

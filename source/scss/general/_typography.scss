@@ -64,6 +64,7 @@
 
   @include mobile{
     border-radius: 12px;
+    min-width: initial;
   }
 
   &--transparent {

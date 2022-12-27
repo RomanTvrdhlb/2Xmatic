@@ -1652,6 +1652,7 @@ fieldset {
 @media (max-width: 576px) {
   .main-button {
     border-radius: 12px;
+    min-width: initial;
   }
 }
 .main-button--transparent {
@@ -2602,6 +2603,7 @@ p {
   background: rgba(var(--bg-j), 1);
   border-radius: 80px;
   padding: 7px 20px;
+  white-space: nowrap;
 }
 .referral-card__top {
   display: -webkit-box;
