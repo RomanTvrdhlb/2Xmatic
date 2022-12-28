@@ -1,0 +1,12 @@
+.banner-size{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+    &__item{
+
+        &--mode{
+            grid-column: span 2;
+        }
+    }
+}

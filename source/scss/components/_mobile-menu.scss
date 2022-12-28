@@ -13,6 +13,7 @@
     transform: translateX(-300%);
     transition: all 0.4s;
     
+    
     &__top{
         padding: 8px 17px;
         position: absolute;
@@ -38,7 +39,7 @@
     }
 
     &__wrapper{
-        @include gradient-border(linear-gradient(106.41deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), 1px);
+        
         overflow-y: auto;
         display: flex;
         flex-direction: column;

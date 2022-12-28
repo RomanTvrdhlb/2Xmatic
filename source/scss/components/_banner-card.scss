@@ -1,0 +1,30 @@
+.banner-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 48px;
+    border: 1px solid var(--br-a);
+    border-radius: 12px;
+    background-color: transparent;
+
+    @include mobile{
+        padding: 12px clamp(20px, 4.364vw, 48px);
+    }
+
+    &__size{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(var(--cl-b),1.0);
+    }
+
+    &--violet{
+        background-color: rgba(var(--bg-d),1.0);
+        .banner-card__size{
+            color: rgba(var(--cl-a),1.0);
+        }
+        
+    }
+}

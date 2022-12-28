@@ -1,12 +1,48 @@
 .index-first{
-    padding: 69px 0 clamp(80px, 8.364vw, 92px);
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-bottom: clamp(20px, 5.455vw, 60px);
+    padding: 69px 0 clamp(80px, 9.455vw, 104px);
+    margin-bottom: 60px;
 
-    @include tablet{
+    position: relative;
+
+    &:before{
+        position: absolute;
+        content: "";
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-image: url(/img/first-bg.png);
+        width: 100vw;
+        height: 750px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+
+    @include small-tablet{
         margin: 0;
+
+        &::before{
+            background-image: url(/img/icons/img5.png);
+            width: 130px;
+            height: 70px;
+            transform: scaleX(-1) translateX(-45%) rotate(90deg);
+            right: 0;
+            left: initial;
+            bottom: 55%;
+        }
+        &:after{
+            position: absolute;
+            content: "";
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(/img/icons/img4.png);
+            width: 50px;
+            height: 100px;
+            left: 0;
+            transform: scaleX(-1);
+            top: 2%;
+        }
     }
     
     &__box{
@@ -22,6 +58,12 @@
         align-items: center;
         grid-gap: clamp(5px, 0.909vw, 10px);
        
+
+        @include mobile{
+            p{
+                max-width: 330px;
+            }
+        }
     }
 
     &__inner{

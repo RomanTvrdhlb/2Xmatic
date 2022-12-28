@@ -1,5 +1,6 @@
 .modal-list{
-    background: #FFFFFF;
+    z-index: 2;
+    background: rgba(var(--bg-a),1.0);
     border-radius: 22px;
     padding: clamp(20px, 3.636vw, 40px) clamp(14px, 1.818vw, 20px) 60px;
     overflow-x: auto;

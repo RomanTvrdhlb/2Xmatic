@@ -253,9 +253,9 @@ p{
 }
 
 .modal-button{
-  max-width: 290px;
   display: flex;
   align-items: center;
+  grid-gap: 7px;
   justify-content: center;
   font-family: var(--font-family2);
   font-style: normal;
@@ -271,4 +271,42 @@ p{
   svg{
     fill:currentColor;  
   }
+}
+
+.flashing{
+  @keyframes flash{
+    0% {
+      width: 20px;
+      height: 20px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      width: 50px;
+      height: 50px;
+      opacity: 0;
+    }
+  }
+
+  position: relative;
+  z-index: 0;
+
+  &:before{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    background-color: rgba(var(--bg-i),1.0);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    content: "";
+    z-index: -1;
+    border-radius: 50%;
+    animation: flash 2.2s linear infinite;
+  }
+
+  
+
 }

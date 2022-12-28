@@ -263,7 +263,7 @@
             <h1 class="main-title">Smart investments in Matic cryptocurrency</h1>
             <p>x2matic.com - a decentralized investment fund with an open smart contract</p>
             <div class="index-first__inner">
-              <button class="main-button--transparent main-button">Calculator</button>
+              <button class="main-button--transparent main-button" data-btn-modal="calc">Calculator</button>
               <button class="main-button" data-btn-modal="time">Start now</button>
               <span href="#" class="main-scroll">
                 <svg width="12" height="6">
@@ -494,7 +494,7 @@
                         <span class="investments-card__inner-img">
                           <img src="img/sprite/icon7.svg" alt="image" width='65' height='65'>
                         </span>
-                        <span class="investments-card__inner-img">
+                        <span class="investments-card__inner-img flashing">
                           <svg width='78' height='24'>
                             <use href='img/sprite/sprite.svg#icon10'></use>
                           </svg>
@@ -676,7 +676,7 @@
                     Copy link
                 </button>
             </form>
-              <button class="main-button--transparent main-button">Promo tools</button>
+              <button class="main-button--transparent main-button" data-btn-modal="promo">Promo tools</button>
              </div>
           </div>
           </div>
@@ -838,14 +838,26 @@
 
   <div class="modal" data-popup="withdrawls">
     <div class="modal__box" role="dialog" aria-modal="true">
-     
+
       <div class="modal__top">
+        <div class="modal__top-img--left modal__top-img">
+          <picture>
+            <source type='image/webp' srcset='img/icons/img7.webp'>
+            <img width='67' height='107' src='img/icons/img7.png' alt='image'>
+          </picture>
+        </div>
+        <div class=" modal__top-img">
+          <picture>
+            <source type='image/webp' srcset='img/icons/img4.webp'>
+            <img width='68' height='120' src='img/icons/img4.png' alt='image'>
+          </picture>
+        </div>
         <button class="close modal__close" aria-label="Закрыть модальное окно">
           <svg width='24' height='24'>
             <use href='img/sprite/sprite.svg#close'></use>
           </svg>
         </button>
-        
+
         <button class="modal-button">
           <svg width='36' height='36'>
             <use href='img/sprite/sprite.svg#upload'></use>
@@ -1054,319 +1066,345 @@
             </li>
           </ul>
         </li>
-        
+
       </ul>
 
     </div>
-</div>
-
-<div class="modal" data-popup="rewards"> 
-  <div class="modal__box" role="dialog" aria-modal="true">
-   
-    <div class="modal__top">
-      <button class="close modal__close" aria-label="Закрыть модальное окно">
-        <svg width='24' height='24'>
-          <use href='img/sprite/sprite.svg#close'></use>
-        </svg>
-      </button>
-      
-      <button class="modal-button">
-        <svg width='36' height='36'>
-          <use href='img/sprite/sprite.svg#icon11'></use>
-        </svg>
-        referral rewards
-      </button>
-
-      <div class='modal__swiper main-swiper'>
-        <div class='main-swiper__container swiper-container'>
-          <ul class='main-swiper__wrapper swiper-wrapper'>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <ul class="modal-list">
-      <li class="modal-list__item">
-        <ul class="modal-sublist">
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__name">Type:</span>
-          </li>
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__name">User:</span>
-          </li>
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__name">Amount:</span>
-          </li>
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__name">Status:</span>
-          </li>
-        </ul>
-      </li>
-      <li class="modal-list__item">
-        <ul class="modal-sublist--mode  modal-sublist">
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__name">Deposit</span>
-          </li>
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__user">TLJst.....CHKf</span>
-          </li>
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__amount">
-              <img src="img/sprite/icon7.svg" alt="image" width="18" height="18">
-              389.02 Matic
-            </span>
-          </li>
-          <li class="modal-sublist__item">
-            <button class="status-btn">
-              <svg width='18' height='18'>
-                <use href='img/sprite/sprite.svg#icon6'></use>
-              </svg>
-              Complete
-            </button>
-          </li>
-        </ul>
-      </li>
-      <li class="modal-list__item">
-        <ul class="modal-sublist">
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__name">Withdraw</span>
-          </li>
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__user">TLJst.....CHKf</span>
-          </li>
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__amount">
-              <img src="img/sprite/icon7.svg" alt="image" width="18" height="18">
-              389.02 Matic
-            </span>
-          </li>
-          <li class="modal-sublist__item">
-            <button class="status-btn--cancel status-btn">
-              <svg width='18' height='18'>
-                <use href='img/sprite/sprite.svg#close2'></use>
-              </svg>
-              Cancel
-            </button>
-          </li>
-        </ul>
-      </li>
-      <li class="modal-list__item">
-        <ul class="modal-sublist--mode  modal-sublist">
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__name">Deposit</span>
-          </li>
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__user">TLJst.....CHKf</span>
-          </li>
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__amount">
-              <img src="img/sprite/icon7.svg" alt="image" width="18" height="18">
-              389.02 Matic
-            </span>
-          </li>
-          <li class="modal-sublist__item">
-            <button class="status-btn">
-              <svg width='18' height='18'>
-                <use href='img/sprite/sprite.svg#icon6'></use>
-              </svg>
-              Complete
-            </button>
-          </li>
-        </ul>
-      </li>
-      <li class="modal-list__item">
-        <ul class="modal-sublist">
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__name">Withdraw</span>
-          </li>
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__user">TLJst.....CHKf</span>
-          </li>
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__amount">
-              <img src="img/sprite/icon7.svg" alt="image" width="18" height="18">
-              389.02 Matic
-            </span>
-          </li>
-          <li class="modal-sublist__item">
-            <button class="status-btn--cancel status-btn">
-              <svg width='18' height='18'>
-                <use href='img/sprite/sprite.svg#close2'></use>
-              </svg>
-              Cancel
-            </button>
-          </li>
-        </ul>
-      </li>
-      <li class="modal-list__item">
-        <ul class="modal-sublist--mode  modal-sublist">
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__name">Deposit</span>
-          </li>
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__user">TLJst.....CHKf</span>
-          </li>
-          <li class="modal-sublist__item">
-            <span class="modal-sublist__amount">
-              <img src="img/sprite/icon7.svg" alt="image" width="18" height="18">
-              389.02 Matic
-            </span>
-          </li>
-          <li class="modal-sublist__item">
-            <button class="status-btn">
-              <svg width='18' height='18'>
-                <use href='img/sprite/sprite.svg#icon6'></use>
-              </svg>
-              Complete
-            </button>
-          </li>
-        </ul>
-      </li>
-      
-    </ul>
-
   </div>
-</div>
 
-<div class="modal" data-popup="time"> 
-  <div class="modal__box" role="dialog" aria-modal="true">
-   
-    <div class="modal__top">
-      <button class="close modal__close" aria-label="Закрыть модальное окно">
-        <svg width='24' height='24'>
-          <use href='img/sprite/sprite.svg#close'></use>
-        </svg>
-      </button>
-      
-      <button class="modal-button">
-        <svg width='36' height='36'>
-          <use href='img/sprite/sprite.svg#icon12'></use>
-        </svg>
-        Time pool
-      </button>
+  <div class="modal" data-popup="rewards">
+    <div class="modal__box" role="dialog" aria-modal="true">
 
-      <div class='modal__swiper main-swiper'>
-        <div class='main-swiper__container swiper-container'>
-          <ul class='main-swiper__wrapper swiper-wrapper'>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-            <li class='main-swiper__slide swiper-slide'>
-              <span class="main-swiper__icon">
-                <svg width='79' height='16'>
-                  <use href='img/sprite/sprite.svg#slide1'></use>
-                </svg>
-              </span>
-            </li>
-          </ul>
+      <div class="modal__top">
+        <div class="modal__top-img--left modal__top-img">
+          <picture>
+            <source type='image/webp' srcset='img/icons/img7.webp'>
+            <img width='67' height='107' src='img/icons/img7.png' alt='image'>
+          </picture>
+        </div>
+        <div class=" modal__top-img">
+          <picture>
+            <source type='image/webp' srcset='img/icons/img4.webp'>
+            <img width='68' height='120' src='img/icons/img4.png' alt='image'>
+          </picture>
+        </div>
+        <button class="close modal__close" aria-label="Закрыть модальное окно">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#close'></use>
+          </svg>
+        </button>
+
+        <button class="modal-button">
+          <svg width='36' height='36'>
+            <use href='img/sprite/sprite.svg#icon11'></use>
+          </svg>
+          referral rewards
+        </button>
+
+        <div class='modal__swiper main-swiper'>
+          <div class='main-swiper__container swiper-container'>
+            <ul class='main-swiper__wrapper swiper-wrapper'>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-   <div class="modal-time">
-       <p class="modal-time__top">If thete are no purchases of miners in the  amount of $1 or more within an hour after you, then the entire miners amount will automaticakky be credited be credited to your account. 3% of each purchase of INVERTEX Miners if transferred to TIME POOL.</p>
+      <ul class="modal-list">
+        <li class="modal-list__item">
+          <ul class="modal-sublist">
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__name">Type:</span>
+            </li>
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__name">User:</span>
+            </li>
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__name">Amount:</span>
+            </li>
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__name">Status:</span>
+            </li>
+          </ul>
+        </li>
+        <li class="modal-list__item">
+          <ul class="modal-sublist--mode  modal-sublist">
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__name">Deposit</span>
+            </li>
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__user">TLJst.....CHKf</span>
+            </li>
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__amount">
+                <img src="img/sprite/icon7.svg" alt="image" width="18" height="18">
+                389.02 Matic
+              </span>
+            </li>
+            <li class="modal-sublist__item">
+              <button class="status-btn">
+                <svg width='18' height='18'>
+                  <use href='img/sprite/sprite.svg#icon6'></use>
+                </svg>
+                Complete
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="modal-list__item">
+          <ul class="modal-sublist">
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__name">Withdraw</span>
+            </li>
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__user">TLJst.....CHKf</span>
+            </li>
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__amount">
+                <img src="img/sprite/icon7.svg" alt="image" width="18" height="18">
+                389.02 Matic
+              </span>
+            </li>
+            <li class="modal-sublist__item">
+              <button class="status-btn--cancel status-btn">
+                <svg width='18' height='18'>
+                  <use href='img/sprite/sprite.svg#close2'></use>
+                </svg>
+                Cancel
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="modal-list__item">
+          <ul class="modal-sublist--mode  modal-sublist">
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__name">Deposit</span>
+            </li>
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__user">TLJst.....CHKf</span>
+            </li>
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__amount">
+                <img src="img/sprite/icon7.svg" alt="image" width="18" height="18">
+                389.02 Matic
+              </span>
+            </li>
+            <li class="modal-sublist__item">
+              <button class="status-btn">
+                <svg width='18' height='18'>
+                  <use href='img/sprite/sprite.svg#icon6'></use>
+                </svg>
+                Complete
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="modal-list__item">
+          <ul class="modal-sublist">
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__name">Withdraw</span>
+            </li>
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__user">TLJst.....CHKf</span>
+            </li>
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__amount">
+                <img src="img/sprite/icon7.svg" alt="image" width="18" height="18">
+                389.02 Matic
+              </span>
+            </li>
+            <li class="modal-sublist__item">
+              <button class="status-btn--cancel status-btn">
+                <svg width='18' height='18'>
+                  <use href='img/sprite/sprite.svg#close2'></use>
+                </svg>
+                Cancel
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="modal-list__item">
+          <ul class="modal-sublist--mode  modal-sublist">
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__name">Deposit</span>
+            </li>
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__user">TLJst.....CHKf</span>
+            </li>
+            <li class="modal-sublist__item">
+              <span class="modal-sublist__amount">
+                <img src="img/sprite/icon7.svg" alt="image" width="18" height="18">
+                389.02 Matic
+              </span>
+            </li>
+            <li class="modal-sublist__item">
+              <button class="status-btn">
+                <svg width='18' height='18'>
+                  <use href='img/sprite/sprite.svg#icon6'></use>
+                </svg>
+                Complete
+              </button>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="modal" data-popup="time">
+    <div class="modal__box" role="dialog" aria-modal="true">
+
+      <div class="modal__top">
+        <div class="modal__top-img--left modal__top-img">
+          <picture>
+            <source type='image/webp' srcset='img/icons/img7.webp'>
+            <img width='67' height='107' src='img/icons/img7.png' alt='image'>
+          </picture>
+        </div>
+        <div class=" modal__top-img">
+          <picture>
+            <source type='image/webp' srcset='img/icons/img4.webp'>
+            <img width='68' height='120' src='img/icons/img4.png' alt='image'>
+          </picture>
+        </div>
+        <button class="close modal__close" aria-label="Закрыть модальное окно">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#close'></use>
+          </svg>
+        </button>
+
+        <button class="modal-button">
+          <svg width='36' height='36'>
+            <use href='img/sprite/sprite.svg#icon12'></use>
+          </svg>
+          Time pool
+        </button>
+
+        <div class='modal__swiper main-swiper'>
+          <div class='main-swiper__container swiper-container'>
+            <ul class='main-swiper__wrapper swiper-wrapper'>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-time">
+        <p class="modal-time__top">If thete are no purchases of miners in the amount of $1 or more within an hour after
+          you, then the entire miners amount will automaticakky be credited be credited to your account. 3% of each
+          purchase of INVERTEX Miners if transferred to TIME POOL.</p>
         <div class="modal-time__inner card-top--violet card-top">
           <span class="modal-time__coin">
             <img src="../img/icons/coin2.png" alt="coin">
@@ -1377,16 +1415,351 @@
           </div>
           <div class="modal-time__bottom">
             <span class="modal-time__purchase">Last purchase was by:</span>
-            <span class="modal-time__purchase">RosyFinance - <span class="modal-time__purchase-value">109.39 USD</span></span>
+            <span class="modal-time__purchase">RosyFinance - <span class="modal-time__purchase-value">109.39
+                USD</span></span>
           </div>
 
         </div>
+      </div>
+
+    </div>
   </div>
 
+  <div class="modal" data-popup="calc">
+    <div class="modal__box" role="dialog" aria-modal="true">
+
+      <div class="modal__top">
+        <div class="modal__top-img--left modal__top-img">
+          <picture>
+            <source type='image/webp' srcset='img/icons/img7.webp'>
+            <img width='67' height='107' src='img/icons/img7.png' alt='image'>
+          </picture>
+        </div>
+        <div class=" modal__top-img">
+          <picture>
+            <source type='image/webp' srcset='img/icons/img4.webp'>
+            <img width='68' height='120' src='img/icons/img4.png' alt='image'>
+          </picture>
+        </div>
+        <button class="close modal__close" aria-label="Закрыть модальное окно">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#close'></use>
+          </svg>
+        </button>
+
+        <button class="modal-button">
+          <svg width='36' height='36'>
+            <use href='img/sprite/sprite.svg#icon12'></use>
+          </svg>
+          Time pool
+        </button>
+
+        <div class='modal__swiper main-swiper'>
+          <div class='main-swiper__container swiper-container'>
+            <ul class='main-swiper__wrapper swiper-wrapper'>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-calc">
+        <div class="modal-calc__inner">
+          <div class="investments-card investments-card--start">
+            <div class="investments-card__inner modal-calc__wrapper">
+              <span class="investments-card__inner-img">
+                <img src="img/icons/coin2.png" alt="image" width='65' height='55'>
+              </span>
+              <span class="investments-card__inner-img modal-calc__img--mode modal-calc__img">
+                <img src="img/sprite/img3.svg" alt="image" width='134' height='134'>
+              </span>
+              <span class="investments-card__inner-img modal-calc__img">
+                <img src="img/sprite/img3.svg" alt="image" width='134' height='134'>
+              </span>
+              <span class="investments-card__inner-img">
+                <img src="img/icons/coin3.png" alt="image" width='85' height='94'>
+              </span>
+            </div>
+
+            <div class="investments-card__middle">
+              <label for="#" class="investments-card__middle-label">
+                <span class="investments-card__middle-icon">
+                  <img src="img/sprite/icon7.svg" alt="image">
+                </span>
+                <input type="text" class="investments-card__middle-input" placeholder="10">
+              </label>
+              <button class="main-button--mode main-button">Invest now</button>
+            </div>
+            <div class="investments-card__bottom">
+            <ul class="investments-card__bottom-list">
+              <li class="investments-card__bottom-item">
+                <span class="investments-card__bottom-text">Min investment:</span>
+                <span>Max investment:</span>
+              </li>
+              <li class="investments-card__bottom-item">
+                <span class="investments-card__bottom-value violet-text">
+                  10 Matic
+                </span>
+                <span class="investments-card__bottom-value violet-text">
+                  1000 Matic
+                </span>
+              </li>
+            </ul>
+          </div>
+          </div>
+        </div>
+        <div class="modal-calc__arrow">
+          <span>
+           <img src="img/sprite/arrow.svg" alt="image">
+          </span>
+        </div>
+        <div class="modal-calc__content">
+           <ul class="calc-list">
+            <li class="calc-list__item">
+              <span class="calc-list__name">Total amount:</span>
+              <span class="calc-list__value">389.02 Matic</span>
+            </li>
+            <li class="calc-list__item">
+              <span class="calc-list__name">Min investment: </span>
+              <span class="calc-list__value">200%</span>
+            </li>
+            <li class="calc-list__item">
+              <span class="calc-list__name">Investment term:</span>
+              <span class="calc-list__value">10 days</span>
+            </li>
+           </ul>
+           <ul class="calc-list">
+            <li class="calc-list__item">
+              <span class="calc-list__name">Per hour:</span>
+              <span class="calc-list__value">389.02 Matic</span>
+            </li>
+            <li class="calc-list__item">
+              <span class="calc-list__name">Per Day:</span>
+              <span class="calc-list__value">389.02 Matic</span>
+            </li>
+            <li class="calc-list__item">
+              <span class="calc-list__name">Per in 10 days:</span>
+              <span class="calc-list__value">389.02 Matic</span>
+            </li>
+           </ul>
+           <div class="modal-calc__icon">
+            <img src="img/icons/img5.png" alt="image">
+           </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal" data-popup="promo">
+    <div class="modal__box" role="dialog" aria-modal="true">
+
+      <div class="modal__top">
+        <div class="modal__top-img--left modal__top-img">
+          <picture>
+            <source type='image/webp' srcset='img/icons/img7.webp'>
+            <img width='67' height='107' src='img/icons/img7.png' alt='image'>
+          </picture>
+        </div>
+        <div class=" modal__top-img">
+          <picture>
+            <source type='image/webp' srcset='img/icons/img4.webp'>
+            <img width='68' height='120' src='img/icons/img4.png' alt='image'>
+          </picture>
+        </div>
+        <button class="close modal__close" aria-label="Закрыть модальное окно">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#close'></use>
+          </svg>
+        </button>
+
+        <button class="modal-button">
+          <svg width='30' height='30'>
+            <use href='img/sprite/sprite.svg#icon13'></use>
+          </svg>
+          promo material
+        </button>
+
+        <div class='modal__swiper main-swiper'>
+          <div class='main-swiper__container swiper-container'>
+            <ul class='main-swiper__wrapper swiper-wrapper'>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-promo">
+        <div class="modal-promo__inner">
+          <div class="modal-promo__banner">
+            <picture>
+              <source type='image/webp' srcset='img/icons/banner.webp'>
+              <img width='229' height='240' src='img/icons/banner.png' alt='image'>
+            </picture>
+          </div>
+
+          <div class="modal-promo__content">
+            <ul class="banner-size">
+              <li class="banner-size__item">
+                <div class="banner-card">
+                  <span class="banner-card__size">125х125</span>
+                </div>
+              </li>
+              <li class="banner-size__item">
+                <div class="banner-card">
+                  <span class="banner-card__size">240x400</span>
+                </div>
+              </li>
+              <li class="banner-size__item">
+                <div class="banner-card">
+                  <span class="banner-card__size">300x300</span>
+                </div>
+              </li>
+              <li class="banner-size__item">
+                <div class="banner-card">
+                  <span class="banner-card__size">486x60</span>
+                </div>
+              </li>
+              <li class="banner-size__item--mode banner-size__item">
+                <div class="banner-card--violet banner-card">
+                  <span class="banner-card__size">728x90</span>
+                </div>
+              </li>
+            </ul>
+
+            <span class="modal-promo__value violet-text">Your link to banner 728x90</span>
+
+            <form action="#" class="copy-form">
+              <label for="#" class="copy-form__label">
+                  <input type="text" class="copy-form__input" value="https://2xmatic.io/ref-24835353">
+              </label>
+              <button class="copy-form__button main-button">
+                  <i class="copy-icon"></i>
+                  Copy link
+              </button>
+          </form>
+          </div>
+          
+
+
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
-</div>
 
+</div>
 </body>
 <script src="js/main.js"></script>
 
