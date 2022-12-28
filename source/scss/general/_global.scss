@@ -367,3 +367,20 @@ fieldset {
     pointer-events: none;
   }
 }
+// .modal {
+//   opacity: 0;
+//   position: absolute;
+//   visibility: hidden;
+//   transition: all .1s;
+//   transition-delay: 0;
+//   transform: translateY(-100vh) scale(0);
+
+//   &.active {
+//     transform: translateY(0) scale(1);
+//     opacity: 1;
+//     visibility: visible;
+//     position: relative;
+//     transition-delay: .5s;
+//     pointer-events: initial;
+//   }
+// }

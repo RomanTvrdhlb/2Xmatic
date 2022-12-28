@@ -3679,6 +3679,7 @@ header {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   bottom: 0;
+  pointer-events: none;
 }
 @media (max-width: 767px) {
   .index-first {
@@ -3898,7 +3899,9 @@ header {
 
 .modal {
   max-width: 741px;
+  width: 100%;
   overflow: hidden;
+  overflow-y: initial;
 }
 .modal__box {
   display: -webkit-box;

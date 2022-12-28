@@ -1,6 +1,9 @@
 .modal{
     max-width: 741px;
+    width: 100%;
     overflow: hidden;
+    overflow-y: initial;
+
     &__box{
         
         display: flex;
