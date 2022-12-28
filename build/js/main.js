@@ -15,12 +15,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_copyForm__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_copyForm__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/burger */ "./source/js/components/burger.js");
 /* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/modals */ "./source/js/components/modals.js");
-/* harmony import */ var _components_replaceEl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/replaceEl */ "./source/js/components/replaceEl.js");
+/* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/counter */ "./source/js/components/counter.js");
+/* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_counter__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_replaceEl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/replaceEl */ "./source/js/components/replaceEl.js");
 
 // import './components/stickyHeader';
 
 
 // import './components/initMobileSlider';
+
 
 
 // import './components/tabs';
@@ -182,6 +185,49 @@ const removeClassInArray = (arr, customClass) => {
     item.classList.remove(customClass);
   });
 };
+
+/***/ }),
+
+/***/ "./source/js/components/counter.js":
+/*!*****************************************!*\
+  !*** ./source/js/components/counter.js ***!
+  \*****************************************/
+/***/ (function() {
+
+let countDownDate = new Date("May 9, 2023 23:30:00").getTime();
+let x = setInterval(function () {
+  let now = new Date().getTime();
+  let distance = countDownDate - now;
+
+  // let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+  let minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+  let seconds = Math.floor(distance % (1000 * 60) / 1000);
+
+  // const decimalDate = function(item){
+  //   const zeroDate = '0';
+  //   if(item < 10 ){
+  //   item = zeroDate + item;
+  //   }
+  // }
+  // decimalDate(hours);
+  // decimalDate(minutes);
+  // decimalDate(seconds);
+  if (+hours < 10) {
+    hours = '0' + hours;
+  }
+  if (+minutes < 10) {
+    minutes = '0' + minutes;
+  }
+  if (+seconds < 10) {
+    seconds = '0' + seconds;
+  }
+  document.querySelector('[data-countdown]').innerHTML = "<span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
+  if (distance < 0) {
+    clearInterval(x);
+    document.querySelector('[data-tiles]').innerHTML = "EXPIRED";
+  }
+}, 1000);
 
 /***/ }),
 

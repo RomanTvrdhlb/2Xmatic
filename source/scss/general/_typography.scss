@@ -186,6 +186,16 @@ p{
     pointer-events: none;
   }
 
+  &--violet{
+    z-index: 0;
+    &:before{
+    background: rgba(131, 74, 252, 0.4);
+
+    @include mobile{
+      width: calc(100% - 16px);
+    }
+  }
+  }
   &--mode{
     &:before{
       width: calc(100% - 24px);
