@@ -22,6 +22,7 @@ export default {
   referralCards: document.querySelector('.referral-section__inner'),
   referralForm: document.querySelector('.referral-section__content'),
   mobileTop: document.querySelector('.mobile-menu__top'),
+  copyParrent: [...document.querySelectorAll('.copy-form')],
 
   defaultSliders: [...document.querySelectorAll('.slider-line')],
   logoSlider: [...document.querySelectorAll('.payment-slider .swiper-container')],

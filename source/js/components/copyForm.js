@@ -1,11 +1,13 @@
-const parrent = [...document.querySelectorAll('.copy-form')];
+import vars from "../_vars";
+
+const {copyParrent} = vars;
 
 function copyFunction(textInput) {
   textInput.select();
   document.execCommand("copy");
 }
 
-parrent.map(function(item){
+copyParrent.map(function(item){
   const currentInput =  item.querySelector('.copy-form__input');
   const currentButton =  item.querySelector('.copy-form__button');
   currentButton.addEventListener('click', function(e) {

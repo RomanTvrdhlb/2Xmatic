@@ -12,7 +12,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_getDinamicHeight__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/getDinamicHeight */ "./source/js/components/getDinamicHeight.js");
 /* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sliders */ "./source/js/components/sliders.js");
 /* harmony import */ var _components_copyForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/copyForm */ "./source/js/components/copyForm.js");
-/* harmony import */ var _components_copyForm__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_copyForm__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/burger */ "./source/js/components/burger.js");
 /* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/modals */ "./source/js/components/modals.js");
 /* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/counter */ "./source/js/components/counter.js");
@@ -69,6 +68,7 @@ __webpack_require__.r(__webpack_exports__);
   referralCards: document.querySelector('.referral-section__inner'),
   referralForm: document.querySelector('.referral-section__content'),
   mobileTop: document.querySelector('.mobile-menu__top'),
+  copyParrent: [...document.querySelectorAll('.copy-form')],
   defaultSliders: [...document.querySelectorAll('.slider-line')],
   logoSlider: [...document.querySelectorAll('.payment-slider .swiper-container')],
   mainLinks: [...document.querySelectorAll('.mobile-menu__link')],
@@ -186,14 +186,20 @@ if (overlay) {
 /*!******************************************!*\
   !*** ./source/js/components/copyForm.js ***!
   \******************************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-const parrent = [...document.querySelectorAll('.copy-form')];
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./source/js/_vars.js");
+
+const {
+  copyParrent
+} = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
 function copyFunction(textInput) {
   textInput.select();
   document.execCommand("copy");
 }
-parrent.map(function (item) {
+copyParrent.map(function (item) {
   const currentInput = item.querySelector('.copy-form__input');
   const currentButton = item.querySelector('.copy-form__button');
   currentButton.addEventListener('click', function (e) {
@@ -219,22 +225,9 @@ let countDownDate = new Date("May 9, 2023 23:30:00").getTime();
 let x = setInterval(function () {
   let now = new Date().getTime();
   let distance = countDownDate - now;
-
-  // let days = Math.floor(distance / (1000 * 60 * 60 * 24));
   let hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
   let minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
   let seconds = Math.floor(distance % (1000 * 60) / 1000);
-
-  // const decimalDate = function(item){
-  //   const zeroDate = '0';
-  //   if(item < 10 ){
-  //   item = zeroDate + item;
-  //   }
-  // }
-  // decimalDate(hours);
-  // decimalDate(minutes);
-  // decimalDate(seconds);
-
   if (+hours < 10) {
     hours = '0' + hours;
   }
@@ -275,22 +268,6 @@ let x = setInterval(function () {
         </span>
       </li>
     </ul>`;
-  // document.querySelector('[data-countdown]').innerHTML = 
-  //  "<ul class='counter-list'>" + "<span>" +
-  //   arrHours[0] +
-  //   "</span><span>" +
-  //   arrHours[1] +
-  //   "</span><span>" +
-  //   arrminutes[0] +
-  //   "</span><span>" +
-  //   arrminutes[1] +
-  //   "</span><span>" +
-  //   arrseconds[0] +
-  //   "</span><span>" +
-  //   arrseconds[1] +
-  //   "</span>"+
-  //   "</ul>";
-
   if (distance < 0) {
     clearInterval(x);
     document.querySelector('[data-tiles]').innerHTML = "EXPIRED";
@@ -450,42 +427,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-// const {defaultSliders} = vars;
-
-// function initLineSlider(slider,direction) {
-
-//   function startSlider() {
-//     const swiper = new Swiper(slider && slider, {
-//       slidesPerView: 'auto',
-//       spaceBetween: 40,
-//       centeredSlides: true,
-//       observer: true,
-//       observeParents: true,
-//       loop: true,
-//       speed: 10000,
-//       autoplay: {
-//         delay: 0,
-//         reverseDirection: direction,
-//       },
-//       breakpoints: {
-//         320: {
-//           spaceBetween: 30,
-//         },
-//         576: {
-//           spaceBetween: 40,
-//         },
-//       },
-//     });
-//   }
-
-//   window.addEventListener('resize', throttle(startSlider));
-//   window.addEventListener('DOMContentLoaded', startSlider);
-
-// }
-
-// defaultSliders.map((defaultSlider, index) => even(index + 1) ? initLineSlider(defaultSlider,false) : initLineSlider(defaultSlider,true))
 
 const hiddenSliders = [...document.querySelectorAll('.main-swiper__container')];
 hiddenSliders.map(function (slider) {

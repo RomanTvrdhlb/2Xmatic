@@ -3,23 +3,10 @@
   let now = new Date().getTime();
   let distance = countDownDate - now;
 
-  // let days = Math.floor(distance / (1000 * 60 * 60 * 24));
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
  
-  // const decimalDate = function(item){
-  //   const zeroDate = '0';
-  //   if(item < 10 ){
-  //   item = zeroDate + item;
-  //   }
-  // }
-  // decimalDate(hours);
-  // decimalDate(minutes);
-  // decimalDate(seconds);
-
- 
-
   if(+hours < 10 ){
     hours = '0' + hours;
   }
@@ -62,25 +49,6 @@
         </span>
       </li>
     </ul>`;
-  // document.querySelector('[data-countdown]').innerHTML = 
-  //  "<ul class='counter-list'>" + "<span>" +
-  //   arrHours[0] +
-  //   "</span><span>" +
-  //   arrHours[1] +
-  //   "</span><span>" +
-  //   arrminutes[0] +
-  //   "</span><span>" +
-  //   arrminutes[1] +
-  //   "</span><span>" +
-  //   arrseconds[0] +
-  //   "</span><span>" +
-  //   arrseconds[1] +
-  //   "</span>"+
-  //   "</ul>";
-
-   
-    
-
 
   if (distance < 0) {
     clearInterval(x);
