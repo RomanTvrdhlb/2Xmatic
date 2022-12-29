@@ -2,16 +2,13 @@
     max-width: 741px;
     width: 90vw;
  
-
     &__box{
-        
         display: flex;
         flex-direction: column;
         grid-gap: 10px;
         border-radius: 22px;
         overflow: hidden;
         @include modal-border(linear-gradient(99.48deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), 1px);
-       
     }
 
     &__top{

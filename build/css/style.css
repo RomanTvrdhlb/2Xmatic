@@ -378,7 +378,7 @@
   height: 21px;
   width: 21px;
   left: 1px;
-  bottom: 1px;
+  bottom: 1.5px;
   background-color: rgba(var(--bg-a), 1);
   -webkit-transition: 0.4s;
   transition: 0.4s;

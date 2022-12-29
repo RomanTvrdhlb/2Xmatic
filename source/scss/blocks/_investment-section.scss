@@ -29,8 +29,6 @@
         top: 10%;
     }
 
-   
-
     @include small-tablet{
         margin-bottom: 80px;
     }
@@ -56,5 +54,4 @@
             grid-gap: 50px;
         }
     }
-
 }
