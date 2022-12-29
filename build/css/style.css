@@ -1156,11 +1156,7 @@ body {
   background-size: cover;
   background-repeat: repeat-y;
   background-position: top center;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: normal;
-  font-family: var(--font-family);
-  color: rgba(var(--color-b), 1);
+  font-variant-numeric: lining-nums;
   -webkit-text-size-adjust: 100%;
 }
 body.fixed-body {
@@ -2769,9 +2765,10 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  grid-gap: 2px;
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 600;
@@ -2869,6 +2866,7 @@ p {
   color: rgba(var(--cl-e), 1);
   background: rgba(var(--bg-h), 1);
   border-radius: 12px;
+  font-variant-numeric: lining-nums;
 }
 @media (max-width: 576px) {
   .copy-form__input {
@@ -2926,6 +2924,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
 }
 @media (max-width: 576px) {
   .how-card {
@@ -2933,6 +2932,7 @@ p {
   }
 }
 .how-card__title {
+  text-align: center;
   font-family: var(--font-family2);
   font-style: normal;
   font-weight: 700;

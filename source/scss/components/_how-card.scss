@@ -9,12 +9,13 @@
     grid-gap: 10px;
     min-height: clamp(341px, 33.545vw, 369px);
     align-items: center;
-
+    height: 100%;
     @include mobile{
         max-width: 310px;
     }
 
     &__title{
+        text-align: center;
         font-family: var(--font-family2);
         font-style: normal;
         font-weight: 700;

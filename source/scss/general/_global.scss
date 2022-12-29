@@ -12,16 +12,10 @@ body {
   margin: 0;
 //  background: var(--gradient-bg);
   background-image: url(/img/main-bg.png);
-  background-size: cover;
+  background-size: cover ;
   background-repeat: repeat-y;
-  background-position: top center;
-  
-  font-weight: 400;
-  font-size: 16px;
-  line-height: normal;
-  font-family: var(--font-family);
-  color: rgba(var(--color-b),1.0);
-
+  background-position: top center; 
+  font-variant-numeric: lining-nums;
   -webkit-text-size-adjust: 100%;
   // for text resize
 
@@ -117,6 +111,7 @@ h6,
 p {
   margin: 0;
   padding: 0;
+  
 }
 
 img {
