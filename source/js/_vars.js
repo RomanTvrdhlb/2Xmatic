@@ -25,7 +25,7 @@ export default {
 
   defaultSliders: [...document.querySelectorAll('.slider-line')],
   logoSlider: [...document.querySelectorAll('.payment-slider .swiper-container')],
-  mainLinks: [...document.querySelectorAll('.main-nav__link')],
+  mainLinks: [...document.querySelectorAll('.mobile-menu__link')],
   observSections: [...document.querySelectorAll('.section-observe')],
   formsSecond: '.contacts-section__form',
   formsFirst: '.contact-section__form',

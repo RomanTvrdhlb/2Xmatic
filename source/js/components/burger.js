@@ -37,7 +37,6 @@ if(burger) {
       hideMenuHandler(overlay,mobileMenu,burger)
     });
   })
-
 }
 
 if (overlay) {

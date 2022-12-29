@@ -43,12 +43,12 @@
 <nav class="main-nav header-box__nav">
   <ul class="main-nav__list">
     <li class="main-nav__item">
-      <a href="#" class="main-nav__link">
+      <a href="#investments" class="main-nav__link">
         Investments
       </a>
     </li>
     <li class="main-nav__item">
-      <a href="#" class="main-nav__link">
+      <a href="#how" class="main-nav__link">
         How it works
       </a>
     </li>
@@ -64,7 +64,7 @@
       </a>
     </li>
     <li class="main-nav__item">
-      <a href="#" class="main-nav__link">
+      <a href="#referrals" class="main-nav__link">
         Referrals
       </a>
     </li>
@@ -96,12 +96,12 @@
             </span>
           </button>
   
-          <button class="country-button">
+          <a class="country-button">
             <picture>
               <source type='image/webp' srcset='img/nav-icon/country.webp'>
               <img width='28' height='28' src='img/nav-icon/country.png' alt='image'>
             </picture>
-          </button>
+          </a>
         </div>
 
         <div class="mobile-menu">
@@ -131,14 +131,14 @@
 
             <ul class="mobile-menu__nav">
               <li class="mobile-menu__item">
-                <a class="mobile-menu__link">
+                <a href="#investments" class="mobile-menu__link">
                   <svg width='20' height='20'>
                     <use href='img/sprite/sprite.svg#mob1'></use>
                   </svg>
                   Investments</a>
               </li>
               <li class="mobile-menu__item">
-                <a class="mobile-menu__link">
+                <a href="#how" class="mobile-menu__link">
                   <svg width='20' height='20'>
                     <use href='img/sprite/sprite.svg#mob2'></use>
                   </svg>
@@ -152,7 +152,7 @@
                   FAQ</a>
               </li>
               <li class="mobile-menu__item">
-                <a class="mobile-menu__link">
+                <a href="#referrals" class="mobile-menu__link">
                   <svg width='20' height='20'>
                     <use href='img/sprite/sprite.svg#mob4'></use>
                   </svg>
@@ -256,6 +256,12 @@
   <!-- <main style="background-image:url(img/first-bg.png)"> -->
   <main>
     <section class="index-first">
+      <div class="index-first__image">
+        <picture>
+          <source type='image/webp' srcset='img/first-bg.webp'>
+          <img width='1920' height='969' src='img/first-bg.png' alt='image'>
+        </picture>
+      </div>
       <div class="container">
         <div class="index-first__box">
           <div class="index-first__content">
@@ -265,11 +271,11 @@
             <div class="index-first__inner">
               <button class="main-button--transparent main-button" data-btn-modal="calc">Calculator</button>
               <button class="main-button" data-btn-modal="time">Start now</button>
-              <span href="#" class="main-scroll">
+              <a href="#investments" class="main-scroll">
                 <svg width="12" height="6">
                   <use href='img/sprite/sprite.svg#arrow-b'></use>
                 </svg>
-                scroll down</span>
+                scroll down</a>
             </div>
           </div>
           <div class='main-swiper'>
@@ -346,7 +352,7 @@
     </section>
 
 
-    <section class="investment-section">
+    <section class="investment-section" id="investments">
       <div class="section-wrapper">
         <div class="container">
           <div class="investment-section__box">
@@ -571,7 +577,7 @@
       </div>
     </section>
 
-    <section class="referral-section">
+    <section class="referral-section" id="referrals">
       <div class="section-wrapper">
         <div class="container">
           <div class="referral-section__box">
@@ -684,7 +690,7 @@
       </div>
     </section>
 
-    <section class="how-section">
+    <section class="how-section" id="how">
       <div class="section-wrapper">
         <div class="container">
           <div class="how-section__box">
@@ -769,12 +775,12 @@
 <nav class="main-nav footer-box__nav">
   <ul class="main-nav__list">
     <li class="main-nav__item">
-      <a href="#" class="main-nav__link">
+      <a href="#investments" class="main-nav__link">
         Investments
       </a>
     </li>
     <li class="main-nav__item">
-      <a href="#" class="main-nav__link">
+      <a href="#how" class="main-nav__link">
         How it works
       </a>
     </li>
@@ -790,7 +796,7 @@
       </a>
     </li>
     <li class="main-nav__item">
-      <a href="#" class="main-nav__link">
+      <a href="#referrals" class="main-nav__link">
         Referrals
       </a>
     </li>
@@ -822,17 +828,18 @@
           </span>
         </button>
 
-        <button class="country-button">
+        <a class="country-button">
           <picture>
             <source type='image/webp' srcset='img/nav-icon/country.webp'>
             <img width='28' height='28' src='img/nav-icon/country.png' alt='image'>
           </picture>
-        </button>
+        </a>
       </div>
     </div>
   </div>
 
 </footer>
+
 
 <div class="overlay" data-overlay>
 
@@ -1759,7 +1766,17 @@
   </div>
 </div>
 
-</div>
+
+
+
+
+
+
+
+
+
+
+
 </body>
 <script src="js/main.js"></script>
 

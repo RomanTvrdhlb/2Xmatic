@@ -1,5 +1,35 @@
 .investment-section{
     margin-bottom: 60px;
+    position: relative;
+
+    &::before,&::after{
+        position: absolute;
+        content: "";
+        pointer-events: none;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        z-index: -1;
+        @include tablet{
+            display: none;
+        }
+    }
+    &::before{
+        background-image: url(/img/icons/img9.png);
+        width: 77px;
+        height: 600px;
+        left: 0;
+        top: 23%;
+    }
+    &::after{
+        background-image: url(/img/icons/img8.png);
+        width: 80px;
+        height: 200px;
+        right: 0;
+        top: 10%;
+    }
+
+   
 
     @include small-tablet{
         margin-bottom: 80px;

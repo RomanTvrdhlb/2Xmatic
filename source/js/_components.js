@@ -13,7 +13,7 @@ import './components/counter';
 // import './components/select';
 import './components/replaceEl';
 // import './components/accordions';
-// import './components/anchor';
+import './components/anchor';
  
 
 

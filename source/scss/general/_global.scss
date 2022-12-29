@@ -56,66 +56,6 @@ main {
   @include gradient-border(linear-gradient(106.41deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), 1px);
 }
 
-
-
-
-.round-bg {
-  position: relative;
-  z-index: 0;
-
-  &::before, &:after {
-    content: '';
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: -1;
-    pointer-events: none;
-  }
-
-  &::before {
-    background-image: var(--round-right);
-    width: clamp(233px, 27.227vw, 324px);
-    height: clamp(218px, 17.311vw, 206px);
-    right: 0%;
-    top: 50%;
-    transform: translate(80%,-50%);
-    filter: blur(100px);
-    opacity: .6;
-
-  }
-
-  &::after {
-    background-image: var(--round-left);
-    width: clamp(327px, 32.437vw, 386px);
-    height: clamp(301px, 29.916vw, 356px);
-    left: 0;
-    top: 50%;
-    transform: translate(-90%, -50%);
-    filter: blur(10px);
-    opacity: .3;
-
-    @include laptop {
-      transform: translate(-60%, -50%);
-    }
-  }
-}
-
-
-.has-bg {
-  .container {
-    padding-top: clamp(46px, 6.05vw, 72px);
-    padding-bottom: clamp(46px, 6.05vw, 72px);
-    background-image: url(../img/logo-bg.svg);
-    background-position: 81% center;
-    background-repeat: no-repeat;
-    background-size: clamp(126px, 19.748vw, 235px);
-
-    @include mobile {
-      background-position: 100% top;
-    }
-  }
-}
-
 *,
 *::after,
 *::before {
@@ -367,20 +307,3 @@ fieldset {
     pointer-events: none;
   }
 }
-// .modal {
-//   opacity: 0;
-//   position: absolute;
-//   visibility: hidden;
-//   transition: all .1s;
-//   transition-delay: 0;
-//   transform: translateY(-100vh) scale(0);
-
-//   &.active {
-//     transform: translateY(0) scale(1);
-//     opacity: 1;
-//     visibility: visible;
-//     position: relative;
-//     transition-delay: .5s;
-//     pointer-events: initial;
-//   }
-// }

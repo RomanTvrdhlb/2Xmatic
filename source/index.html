@@ -8,6 +8,12 @@
   <!-- <main style="background-image:url(img/first-bg.png)"> -->
   <main>
     <section class="index-first">
+      <div class="index-first__image">
+        <picture>
+          <source type='image/webp' srcset='img/first-bg.webp'>
+          <img width='1920' height='969' src='img/first-bg.png' alt='image'>
+        </picture>
+      </div>
       <div class="container">
         <div class="index-first__box">
           <div class="index-first__content">
@@ -17,11 +23,11 @@
             <div class="index-first__inner">
               <button class="main-button--transparent main-button" data-btn-modal="calc">Calculator</button>
               <button class="main-button" data-btn-modal="time">Start now</button>
-              <span href="#" class="main-scroll">
+              <a href="#investments" class="main-scroll">
                 <svg width="12" height="6">
                   <use href='img/sprite/sprite.svg#arrow-b'></use>
                 </svg>
-                scroll down</span>
+                scroll down</a>
             </div>
           </div>
           <div class='main-swiper'>
@@ -98,7 +104,7 @@
     </section>
 
 
-    <section class="investment-section">
+    <section class="investment-section" id="investments">
       <div class="section-wrapper">
         <div class="container">
           <div class="investment-section__box">
@@ -323,7 +329,7 @@
       </div>
     </section>
 
-    <section class="referral-section">
+    <section class="referral-section" id="referrals">
       <div class="section-wrapper">
         <div class="container">
           <div class="referral-section__box">
@@ -436,7 +442,7 @@
       </div>
     </section>
 
-    <section class="how-section">
+    <section class="how-section" id="how">
       <div class="section-wrapper">
         <div class="container">
           <div class="how-section__box">

@@ -8,9 +8,9 @@
     padding: calc(var(--mobile-top-height) + 40px) 20px 40px;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 100;
-    transform: translateX(-300%);
+    transform: translateX(300%);
     transition: all 0.4s;
     
     
@@ -19,13 +19,13 @@
         position: absolute;
         top: 0;
         width: 0;
-        left: 0;
+        right: 0;
         display: flex;
         grid-gap: 5px;
         justify-content: space-between;
         align-items: center;
         background: rgba(var(--bg-a),1.0);
-        transition: all .4s linear;
+        transition: all .4s;
     }
     
     &__swiper{
@@ -97,6 +97,7 @@
         background: var(--gradient-bg2);
         border-radius: 80px;
         display: flex;
+        grid-gap: 10px;
         align-items: center;
         justify-content: center;
         font-family: var(--font-family);

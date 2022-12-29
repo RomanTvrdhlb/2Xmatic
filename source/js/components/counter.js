@@ -7,7 +7,7 @@
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
+ 
   // const decimalDate = function(item){
   //   const zeroDate = '0';
   //   if(item < 10 ){
@@ -17,6 +17,9 @@
   // decimalDate(hours);
   // decimalDate(minutes);
   // decimalDate(seconds);
+
+ 
+
   if(+hours < 10 ){
     hours = '0' + hours;
   }
@@ -27,16 +30,61 @@
     seconds = '0' + seconds;
   }
 
-  document.querySelector('[data-countdown]').innerHTML = "<span>" +
-    hours +
-    "</span><span>" +
-    minutes +
-    "</span><span>" +
-    seconds +
-    "</span>";
+  let arrHours = [...hours.toString()].map(Number);
+  let arrminutes = [...minutes.toString()].map(Number);
+  let arrseconds = [...seconds.toString()].map(Number);
+
+  document.querySelector('[data-countdown]').innerHTML =  `
+
+    <ul class='counter-list'>
+      <li class='counter-list__item'>
+        <span>
+          ${arrHours[0]}
+        </span>
+        <span>
+          ${arrHours[1]}
+        </span>
+      </li>
+      <li class='counter-list__item'>
+        <span>
+          ${arrminutes[0]}
+        </span>
+        <span>
+          ${arrminutes[1]}
+        </span>
+      </li>
+      <li class='counter-list__item'>
+        <span>
+          ${arrseconds[0]}
+        </span>
+        <span>
+          ${arrseconds[1]}
+        </span>
+      </li>
+    </ul>`;
+  // document.querySelector('[data-countdown]').innerHTML = 
+  //  "<ul class='counter-list'>" + "<span>" +
+  //   arrHours[0] +
+  //   "</span><span>" +
+  //   arrHours[1] +
+  //   "</span><span>" +
+  //   arrminutes[0] +
+  //   "</span><span>" +
+  //   arrminutes[1] +
+  //   "</span><span>" +
+  //   arrseconds[0] +
+  //   "</span><span>" +
+  //   arrseconds[1] +
+  //   "</span>"+
+  //   "</ul>";
+
+   
+    
+
 
   if (distance < 0) {
     clearInterval(x);
     document.querySelector('[data-tiles]').innerHTML = "EXPIRED";
+
   }
 }, 1000);
