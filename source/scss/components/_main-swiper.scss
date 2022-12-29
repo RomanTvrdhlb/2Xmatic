@@ -2,6 +2,10 @@
 
     width: Min(60.909vw, 670px);
 
+    @include desktop{
+        width: 500px;
+    }
+
     &__wrapper{
         -webkit-transition-timing-function: linear !important;
         transition-timing-function: linear !important;

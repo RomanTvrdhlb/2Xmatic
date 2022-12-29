@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="En-en">
+<html lang="En">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -256,12 +256,12 @@
   <!-- <main style="background-image:url(img/first-bg.png)"> -->
   <main>
     <section class="index-first">
-      <div class="index-first__image">
+      <!-- <div class="index-first__image">
         <picture>
           <source type='image/webp' srcset='img/first-bg.webp'>
           <img width='1920' height='969' src='img/first-bg.png' alt='image'>
         </picture>
-      </div>
+      </div> -->
       <div class="container">
         <div class="index-first__box">
           <div class="index-first__content">
@@ -370,8 +370,8 @@
                 </li>
                 <li class="investment-list__item">
                   <div class="invest-card">
-                    <span class="invest-card__name">You wallet:</span>
-                    <span class="invest-card__value">0xb931...3ab8b5</span>
+                    <span class="invest-card__name">Wallet balance:</span>
+                    <span class="invest-card__value">2893783.02 Matic</span>
                     <span class="invest-card__icon">
                       <img src="img/sprite/icon2.svg" alt="image">
                     </span>
@@ -379,8 +379,8 @@
                 </li>
                 <li class="investment-list__item">
                   <div class="invest-card">
-                    <span class="invest-card__name">You wallet:</span>
-                    <span class="invest-card__value">0xb931...3ab8b5</span>
+                    <span class="invest-card__name">Total paid:</span>
+                    <span class="invest-card__value">2883.02 Matic</span>
                     <span class="invest-card__icon">
                       <img src="img/sprite/icon2.svg" alt="image">
                     </span>
@@ -388,8 +388,8 @@
                 </li>
                 <li class="investment-list__item">
                   <div class="invest-card">
-                    <span class="invest-card__name">You wallet:</span>
-                    <span class="invest-card__value">0xb931...3ab8b5</span>
+                    <span class="invest-card__name">Referral rewards:</span>
+                    <span class="invest-card__value">389.02 Matic</span>
                     <span class="invest-card__icon">
                       <img src="img/sprite/icon2.svg" alt="image">
                     </span>
@@ -411,7 +411,7 @@
                 </li>
                 <li class="investment-list__item">
                   <div class="invest-card--mode invest-card">
-                    <span class="invest-card__name">Active investment:</span>
+                    <span class="invest-card__name">Completed:</span>
                     <span class="invest-card__amount">
                       <svg width="16" height="16">
                         <use href='img/sprite/sprite.svg#icon6'></use>
@@ -455,12 +455,12 @@
                     </div>
 
                     <div class="investments-card__middle">
-                      <label for="#" class="investments-card__middle-label">
+                      <div class="investments-card__middle-label">
                         <span class="investments-card__middle-icon">
                           <img src="img/sprite/icon7.svg" alt="image">
                         </span>
-                        <input type="text" class="investments-card__middle-input" placeholder="10">
-                      </label>
+                        <span class="investments-card__middle-input">10</span>
+                      </div>
                       <button class="main-button--mode main-button">Invest now</button>
                     </div>
                     <div class="investments-card__bottom">
@@ -512,13 +512,13 @@
                     </div>
 
                     <div class="investments-card__middle">
-                      <label for="#" class="investments-card__middle-label">
+                      <div class="investments-card__middle-label">
                         <span class="investments-card__middle-icon">
                           <img src="img/sprite/icon7.svg" alt="image">
                         </span>
-                        <input type="text" class="investments-card__middle-input" placeholder="5.748763 Matic">
-                      </label>
-                      <button class="main-button--mode main-button">Invest now</button>
+                        <span  class="investments-card__middle-input">5.748763 Matic</span>
+                      </div>
+                      <button class="main-button--mode main-button">Claim dividends</button>
                     </div>
                     <div class="investments-card__bottom">
                     <ul class="investments-card__bottom-list">
@@ -650,12 +650,12 @@
                     </span>
                   </div>
                   <div class="referral-card__bottom--mode referral-card__bottom">
-                    <span class="referral-card__bottom-btn">
+                    <button class="referral-card__bottom-btn">
                       <svg width='18' height='18'>
                         <use href='img/sprite/sprite.svg#upload'></use>
                       </svg>
                       Withdraw
-                    </span>
+                    </button>
                   
                   </div>
                   
@@ -671,7 +671,7 @@
           </div>
           <div class="referral-section__content">
              <div class="referral-copy card-top--mode card-top">
-              <span class="referral-copy__title">You Referral link:</span>
+              <span class="referral-copy__title violet-text">You Referral link:</span>
 
               <form action="#" class="copy-form">
                 <label for="#" class="copy-form__label">
@@ -1456,9 +1456,9 @@
 
         <button class="modal-button">
           <svg width='36' height='36'>
-            <use href='img/sprite/sprite.svg#icon12'></use>
+            <use href='img/sprite/sprite.svg#icon14'></use>
           </svg>
-          Time pool
+          calculator
         </button>
 
         <div class='modal__swiper main-swiper'>

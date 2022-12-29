@@ -198,6 +198,7 @@ p{
   }
   &--mode{
     &:before{
+      border-radius: 12px;
       width: calc(100% - 24px);
     }
   }

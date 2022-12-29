@@ -10,7 +10,12 @@ body {
   width: 100%;
   min-height: -webkit-fill-available;
   margin: 0;
-  background: var(--gradient-bg);
+//  background: var(--gradient-bg);
+  background-image: url(/img/main-bg.png);
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-position: top center;
+  
   font-weight: 400;
   font-size: 16px;
   line-height: normal;
