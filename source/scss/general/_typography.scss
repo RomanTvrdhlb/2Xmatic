@@ -188,12 +188,14 @@ p{
 
   &--violet{
     z-index: 0;
+ 
     &:before{
     background: rgba(131, 74, 252, 0.4);
-
-    @include mobile{
-      width: calc(100% - 16px);
-    }
+      width: calc(100% - 22px);
+      
+      @include mobile{
+        width: calc(100% - 12px); 
+      }
   }
   }
   &--mode{
