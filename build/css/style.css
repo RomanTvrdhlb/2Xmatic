@@ -96,17 +96,15 @@
   --bg-k: 238, 238, 242;
   --bg-l: 225, 241, 245;
   --bg-m: 249, 228, 228;
+  --bg-n: 231, 65, 66;
   --br-a: #834AFC;
   --br-b: #cecece;
   --br-c: #6866F6;
   --gradient-bg: radial-gradient(34.76% 133.29% at 57.92% 58.41%, rgba(131, 74, 252, 0.3) 0%, rgba(131, 74, 252, 0) 100%),radial-gradient(86.82% 142.13% at 89.97% 36.76%, rgba(131, 74, 252, 0.3) 0%, rgba(131, 74, 252, 0) 100%),linear-gradient(100.05deg, rgba(131, 74, 252, 0.3) 28.28%, rgba(45, 143, 234, 0.3) 53.98%);
   --gradient-bg2: linear-gradient(93.43deg, #834AFC 0%, #A175FF 100%);
   --icon-a: rgb(104, 102, 246);
-  --icon-b: rgb(231, 65, 66);
-  --icon-c: rgb(45, 216, 74);
-  --icon-d: rgb(185, 139, 242);
-  --icon-e: rgb(242, 184, 72);
-  --icon-f: rgb(34, 158, 120);
+  --icon-b: #e74142;
+  --icon-c: rgb(231, 65, 66,0.2);
 }
 @media (max-width: 1024px) {
   :root {
@@ -1830,7 +1828,7 @@ p {
   position: relative;
   z-index: 0;
 }
-@-webkit-keyframes flash {
+@-webkit-keyframes flashSecond {
   0% {
     width: 20px;
     height: 20px;
@@ -1843,37 +1841,77 @@ p {
     width: 50px;
     height: 50px;
     opacity: 0;
+  }
+}
+@keyframes flashSecond {
+  0% {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes flash {
+  0% {
+    width: 15px;
+    height: 15px;
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.5;
+    width: 30px;
+    height: 30px;
   }
 }
 @keyframes flash {
   0% {
-    width: 20px;
-    height: 20px;
-    opacity: 0;
+    width: 15px;
+    height: 15px;
+    opacity: 0.1;
   }
-  50% {
-    opacity: 1;
+  25% {
+    opacity: 0.3;
   }
   100% {
-    width: 50px;
-    height: 50px;
-    opacity: 0;
+    opacity: 0.5;
+    width: 30px;
+    height: 30px;
   }
 }
-.flashing:before {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -57%);
-          transform: translate(-50%, -57%);
-  background-color: rgba(var(--bg-i), 1);
-  width: 20px;
-  height: 20px;
+.flashing:before, .flashing::after {
   position: absolute;
   content: "";
-  z-index: -1;
   border-radius: 50%;
-  -webkit-animation: flash 2.2s linear infinite;
-          animation: flash 2.2s linear infinite;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 40%;
+  left: 50%;
+}
+.flashing:before {
+  z-index: -1;
+  background-color: rgba(var(--bg-g), 1);
+  width: 15px;
+  height: 15px;
+  -webkit-animation: flash 1s ease-in infinite;
+          animation: flash 1s ease-in infinite;
+}
+.flashing:after {
+  z-index: -2;
+  background-color: rgba(var(--bg-n), 0.2);
+  width: 30px;
+  height: 30px;
+  -webkit-animation: flashSecond 1s ease-in infinite;
+          animation: flashSecond 1s ease-in infinite;
 }
 
 .main-top {
@@ -2641,6 +2679,9 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.investments-card__inner-img {
+  z-index: 1;
 }
 .investments-card__inner-link {
   font-family: var(--font-family);
