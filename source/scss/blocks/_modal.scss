@@ -34,7 +34,7 @@
             position: absolute;
             top: 0;
             right: 0;
-
+            z-index: -1;
             img,picture{
                 width: 100%;
                 height: auto;
@@ -52,8 +52,8 @@
                 left: 13%;
 
                 @include mobile{ 
-                    width: 25%;
-                    left: 12%;
+                    width: 20%;
+                    left: 10%;
                 }
     
             }

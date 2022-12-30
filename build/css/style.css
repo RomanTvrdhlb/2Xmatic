@@ -1862,8 +1862,8 @@ p {
 .flashing:before {
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -55%);
-          transform: translate(-50%, -55%);
+  -webkit-transform: translate(-50%, -57%);
+          transform: translate(-50%, -57%);
   background-color: rgba(var(--bg-i), 1);
   width: 20px;
   height: 20px;
@@ -3009,7 +3009,7 @@ p {
 
 .modal-time {
   z-index: 2;
-  border-radius: 12px;
+  border-radius: 22px;
   background: rgba(var(--bg-a), 1);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4065,6 +4065,7 @@ header {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: -1;
 }
 .modal__top-img img, .modal__top-img picture {
   width: 100%;
@@ -4083,8 +4084,8 @@ header {
 }
 @media (max-width: 576px) {
   .modal__top-img--left {
-    width: 25%;
-    left: 12%;
+    width: 20%;
+    left: 10%;
   }
 }
 .modal__swiper {
