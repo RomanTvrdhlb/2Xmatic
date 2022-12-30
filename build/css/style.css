@@ -1976,11 +1976,6 @@ p {
     max-width: 550px;
   }
 }
-@media (max-width: 576px) {
-  .main-top p {
-    max-width: 310px;
-  }
-}
 
 .main-nav__list {
   display: -webkit-box;
@@ -2986,7 +2981,6 @@ p {
   .copy-form__input {
     text-overflow: ellipsis;
     overflow-x: hidden;
-    max-width: 110px;
   }
 }
 .copy-form__button {
@@ -3388,6 +3382,7 @@ p {
           align-items: flex-end;
   position: relative;
   margin-bottom: -20px;
+  z-index: -1;
 }
 @media (max-width: 576px) {
   .modal-calc__wrapper {
@@ -3502,6 +3497,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -4043,6 +4039,11 @@ header {
           flex-direction: column;
   grid-gap: 60px;
 }
+@media (max-width: 576px) {
+  .investment-section__box {
+    grid-gap: 14px;
+  }
+}
 .investment-section__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4065,7 +4066,7 @@ header {
 }
 @media (max-width: 576px) {
   .investment-section__content {
-    grid-gap: 50px;
+    grid-gap: 24px;
   }
 }
 

@@ -75,7 +75,7 @@
         align-items: flex-end;
         position: relative;
         margin-bottom: -20px;
-
+        z-index: -1;
         @include mobile{
             align-items: flex-start;
 
