@@ -23,5 +23,3 @@ const replaceElementsFunction = (element,parentDesktop,parentMobile,breakpoint, 
     replaceElementsFunction(referralBtn,referralCards,referralForm, 1024,'beforeend','beforeend'); // repalce button on mobile version
   });
 
-
-

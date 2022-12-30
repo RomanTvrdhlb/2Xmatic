@@ -47,6 +47,13 @@ if (overlay) {
     }
   });
 
+  window.addEventListener('resize', () => {
+    let containerWidth = document.documentElement.clientWidth;
+    if (containerWidth > 768) {
+      hideMenuHandler(overlay,mobileMenu,burger)
+    }
+  });
+
 }
 
 
