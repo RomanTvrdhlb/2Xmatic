@@ -1404,8 +1404,7 @@ input[type=number] {
   bottom: 0;
   left: 0;
   z-index: 90;
-  height: 100%;
-  height: -webkit-fill-available;
+  height: 100% !important;
   padding: 20px 20px;
   overflow-y: scroll;
   -webkit-backdrop-filter: blur(20px);
@@ -2712,6 +2711,7 @@ p {
   color: rgba(var(--bg-d), 1);
 }
 .referral-card__top-coin {
+  font-variant-numeric: lining-nums;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2754,6 +2754,7 @@ p {
   padding: 0;
 }
 .referral-card__bottom-amount {
+  font-variant-numeric: lining-nums;
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 400;
@@ -2762,12 +2763,13 @@ p {
   color: rgba(var(--cl-e), 1);
 }
 .referral-card__bottom-value {
+  font-variant-numeric: lining-nums;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   grid-gap: 2px;
   font-family: var(--font-family);
   font-style: normal;
@@ -3510,6 +3512,7 @@ p {
   }
 }
 .counter-list span {
+  font-variant-numeric: lining-nums;
   border-radius: 22px;
   display: -webkit-box;
   display: -ms-flexbox;

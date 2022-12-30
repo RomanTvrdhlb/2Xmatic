@@ -55,6 +55,7 @@
         }
 
         &-coin{
+            font-variant-numeric: lining-nums;
             display: flex;
             align-items: center;
             grid-gap: 6px;
@@ -91,6 +92,7 @@
         }
 
         &-amount{
+            font-variant-numeric: lining-nums;
             font-family: var(--font-family);
             font-style: normal;
             font-weight: 400;
@@ -100,8 +102,9 @@
         }
 
         &-value{
+            font-variant-numeric: lining-nums;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             grid-gap: 2px;
             font-family: var(--font-family);
             font-style: normal;
