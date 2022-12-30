@@ -1157,6 +1157,8 @@ body {
   background-repeat: repeat-y;
   background-position: top center;
   font-variant-numeric: lining-nums;
+  -webkit-font-feature-settings: "lnum";
+          font-feature-settings: "lnum";
   -webkit-text-size-adjust: 100%;
 }
 body.fixed-body {
@@ -1767,6 +1769,7 @@ p {
 }
 
 .violet-text {
+  font-variant-numeric: lining-nums;
   font-size: inherit;
   font-family: inherit;
   color: rgba(var(--cl-d), 1);
@@ -3512,7 +3515,6 @@ p {
   }
 }
 .counter-list span {
-  font-variant-numeric: lining-nums;
   border-radius: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
