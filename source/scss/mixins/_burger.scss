@@ -71,7 +71,7 @@
 .burger {
   display: none;
 
-  @include tablet {
+  @include small-tablet {
     display: flex;
     @include burger;
     position: relative;

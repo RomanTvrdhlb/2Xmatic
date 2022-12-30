@@ -5,13 +5,19 @@
     grid-template-columns: repeat(4, 1fr);
     
     @include laptop{
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: clamp(10px, 4.545vw, 50px);
+    }
+    @include small-tablet{
+        grid-gap: 25px 15px;
     }
 
     @include mobile{
         grid-template-columns: 100%;
         grid-gap: 30px;
-       
+    }
+
+    &__item{
+        height: 100%;
     }
 }

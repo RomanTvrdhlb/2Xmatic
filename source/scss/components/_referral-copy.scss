@@ -11,4 +11,8 @@
     @include mobile{
         padding: 20px 24px;
     }
+
+    &__title{
+        font-family: var(--font-family);
+    }
 }

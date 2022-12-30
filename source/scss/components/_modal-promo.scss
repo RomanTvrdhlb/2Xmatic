@@ -4,6 +4,10 @@
     border-radius: 22px;
     padding:clamp(20px, 3.636vw, 40px) clamp(24px, 5.455vw, 60px) 60px;
 
+    @include mobile{
+        border-radius: 12px;
+    }
+
     &__inner{
         display: flex;
         grid-gap: clamp(18px, 3.636vw, 40px);
@@ -28,6 +32,12 @@
         }
     }
 
+    &__value{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+    }
 
     &__banner{
         display: flex;

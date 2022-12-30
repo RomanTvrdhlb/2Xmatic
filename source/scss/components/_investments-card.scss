@@ -1,5 +1,6 @@
 .investments-card{
     min-height: clamp(358px, 35.273vw, 388px);
+    height: 100%;
     padding: 30px 20px;
     position: relative;
     display: flex;
@@ -10,14 +11,34 @@
     z-index: 0;
     justify-content: center;
 
+   
+
+    @include small-tablet{
+         padding: 30px 5px;
+    }
+
+    @include mobile{
+        padding: 30px 24px;
+    }
+
     &--mode{
         padding: 14px 20px 22px;
+        @include small-tablet{
+            padding: 20px 5px 30px;
+       }
+       
+       @include mobile{
+        padding: 20px 24px 30px;
+       }
     }
 
     &--start{
         justify-content: flex-start;
         padding: 20px 24px 40px;
         min-height: 100%;
+        @include mobile{
+            border-radius: 12px;
+        }
     }
 
     &__top{
@@ -38,6 +59,13 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
+
+            @include small-tablet{
+                right: -5px;
+            }
+            @include mobile{
+                right: -24px;
+            }
         }
 
         &-text{
@@ -150,7 +178,7 @@
 
         &-list{
             display: flex;
-            grid-gap: 12px;
+            grid-gap: 10px;
             justify-content: space-between;
         }
         

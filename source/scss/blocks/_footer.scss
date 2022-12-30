@@ -5,11 +5,16 @@
   grid-gap: clamp(30px, 6.364vw, 70px);
   padding: 60px 0 40px;
 
+
+  @include tablet{
+    grid-gap: 10px;
+  }
+  
   &__inner {
     display: flex;
     align-items: center;
 
-    @include tablet{
+    @include small-tablet{
       display: none;
     }
   }

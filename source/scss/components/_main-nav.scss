@@ -6,7 +6,7 @@
     grid-gap: 32px;
 
     @include laptop{
-      grid-gap: 15px;
+      grid-gap: clamp(10px, 1.364vw, 15px);
     }
   }
 

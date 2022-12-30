@@ -9,6 +9,10 @@
         border-radius: 22px;
         overflow: hidden;
         @include modal-border(linear-gradient(99.48deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), 1px);
+   
+        @include mobile{
+            border-radius: 12px;
+        }
     }
 
     &__top{
@@ -35,10 +39,6 @@
             top: 0;
             right: 0;
             z-index: -1;
-            img,picture{
-                width: 100%;
-                height: auto;
-            }
             
             @include mobile{
                 width: 11%;
@@ -50,10 +50,18 @@
                 right: initial;
                 top: 1px;
                 left: 13%;
+                  img,picture{
+                width: 50%;
+                height: auto;
+                 }
 
                 @include mobile{ 
                     width: 20%;
                     left: 10%;
+                    img,picture{
+                        width: 90%;
+                        height: auto;
+                         }
                 }
     
             }

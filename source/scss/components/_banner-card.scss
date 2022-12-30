@@ -6,11 +6,18 @@
     border: 1px solid var(--br-a);
     border-radius: 12px;
     background-color: transparent;
-
+    transition: all .4s;
     @include mobile{
         padding: 12px clamp(20px, 4.364vw, 48px);
     }
 
+    &:hover{
+        background-color: rgba(var(--bg-d),1.0);
+        *{
+        color: rgba(var(--cl-a),1.0);
+        }
+      }  
+    
     &__size{
         font-family: var(--font-family);
         font-style: normal;
@@ -22,9 +29,12 @@
 
     &--violet{
         background-color: rgba(var(--bg-d),1.0);
-        .banner-card__size{
+        *{
             color: rgba(var(--cl-a),1.0);
         }
+        &:hover{
+            box-shadow: 0px 6px 10px rgba(131, 74, 252, 0.25);
+          }
         
     }
 }

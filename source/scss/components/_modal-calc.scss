@@ -19,6 +19,9 @@
         flex-direction: column;
         position: relative;
         overflow: hidden;
+        @include mobile{
+            border-radius: 12px;
+        }
     }
 
 

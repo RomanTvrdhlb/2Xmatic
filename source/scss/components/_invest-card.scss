@@ -138,6 +138,10 @@
     }
 
     &--mode{
-        padding: clamp(13px, 2.091vw, 23px) clamp(12px, 2.182vw, 24px) 14px; 
+        padding: clamp(13px, 2.091vw, 23px) clamp(12px, 2.182vw, 24px) 14px;
+
+        @include small-tablet{
+            padding:clamp(20px, 2.091vw, 23px) 24px;
+        }
     }
 }

@@ -6,6 +6,10 @@
     flex-direction: column;
     align-items: center;
 
+    @include mobile{
+        border-radius: 12px;
+    }
+
     &__top{
         max-width: 600px;
         font-family: var(--font-family);
@@ -34,12 +38,23 @@
             content: "";
             width: 56px;
             height: 107px;
+            z-index: -1;
             background-image: url(/img/icons/img4.png);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center center;
             right: 0;
             bottom: 10%;
+
+            @include small-tablet{
+                bottom: 0;
+                width: 40px;
+            }
+
+        }
+
+        @include mobile{
+            border-radius: 12px;
         }
 
         @include mobile{
@@ -118,8 +133,10 @@
 
     &__coin{
         position: absolute;
-        top: 5px;
-        left: 5px;
+        top: 13px;
+        left: 20px;
+        width: 65px;
+        height: 60px;
 
         @include mobile{
             display: none;
