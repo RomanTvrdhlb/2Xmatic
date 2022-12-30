@@ -10,14 +10,14 @@ body {
   width: 100%;
   min-height: -webkit-fill-available;
   margin: 0;
-//  background: var(--gradient-bg);
-  background-image: url(/img/main-bg.png);
-  background-size: cover ;
-  background-repeat: repeat-y;
-  background-position: top center; 
+  background: var(--gradient-bg);
+  background-attachment: fixed !important;
+ 
   font-variant-numeric: lining-nums;
   font-feature-settings: "lnum";
   -webkit-text-size-adjust: 100%;
+
+  
   // for text resize
 
   &.fixed-body {
