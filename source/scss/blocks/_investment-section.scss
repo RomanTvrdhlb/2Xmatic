@@ -38,9 +38,7 @@
         flex-direction: column;
         grid-gap: 60px;
 
-        @include mobile{
-            grid-gap: 14px;
-        }
+     
     }
 
     &__inner{
@@ -55,7 +53,7 @@
         grid-gap: 40px;
 
         @include mobile{
-            grid-gap: 24px;
+            grid-gap: 50px;
         }
     }
 }

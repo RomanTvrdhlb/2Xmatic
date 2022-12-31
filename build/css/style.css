@@ -2426,6 +2426,11 @@ p {
   line-height: 120%;
   color: rgba(var(--cl-e), 1);
 }
+@media (max-width: 767px) {
+  .main-switch__item {
+    font-size: 14px;
+  }
+}
 
 .investments-cards {
   display: grid;
@@ -4037,11 +4042,6 @@ header {
           flex-direction: column;
   grid-gap: 60px;
 }
-@media (max-width: 576px) {
-  .investment-section__box {
-    grid-gap: 14px;
-  }
-}
 .investment-section__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4064,7 +4064,7 @@ header {
 }
 @media (max-width: 576px) {
   .investment-section__content {
-    grid-gap: 24px;
+    grid-gap: 50px;
   }
 }
 
