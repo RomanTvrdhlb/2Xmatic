@@ -439,7 +439,10 @@ hiddenSliders.map(function (slider) {
   const headerSwiper = new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(slider, {
     slidesPerView: 'auto',
     spaceBetween: 10,
+    observer: true,
+    observeParents: true,
     loop: true,
+    centeredSlides: true,
     speed: 3000,
     autoplay: {
       delay: 0

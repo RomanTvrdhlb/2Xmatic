@@ -1,0 +1,26 @@
+.modal-failed{
+    z-index: 2;
+    background: rgba(var(--bg-a),1.0);
+    border-radius: 22px;
+    padding: clamp(20px, 3.636vw, 40px) 30px 60px;
+
+    @include small-tablet{
+        border-radius: 12px;
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 10px;
+    }
+ 
+    p{
+        font-family: var(--font-family2);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color:  rgba(var(--cl-e),1.0);
+    }
+}

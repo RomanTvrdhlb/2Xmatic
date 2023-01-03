@@ -1548,7 +1548,11 @@ fieldset {
   font-weight: 700;
   font-size: 14px;
   line-height: 100%;
+  max-width: 110px;
   pointer-events: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 @media (max-width: 1024px) {
   .wallet-button__text {
@@ -2055,6 +2059,7 @@ p {
 }
 
 .main-swiper {
+  pointer-events: none;
   width: min(60.909vw, 670px);
 }
 @media (max-width: 1440px) {
@@ -3814,6 +3819,39 @@ p {
 }
 .modal-connect__item {
   width: 100%;
+}
+
+.modal-failed {
+  z-index: 2;
+  background: rgba(var(--bg-a), 1);
+  border-radius: 22px;
+  padding: clamp(20px, 3.636vw, 40px) 30px 60px;
+}
+@media (max-width: 767px) {
+  .modal-failed {
+    border-radius: 12px;
+  }
+}
+.modal-failed__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 10px;
+}
+.modal-failed p {
+  font-family: var(--font-family2);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(var(--cl-e), 1);
 }
 
 .team-list {

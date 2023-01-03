@@ -531,7 +531,7 @@
                         </span>
                         <input type="number" class="investments-card__middle-input" placeholder="10">
                       </label>
-                      <button class="main-button--mode main-button">Invest now</button>
+                      <button class="main-button--mode main-button" data-btn-modal="failed">Invest now</button>
                     </div>
                     <div class="investments-card__bottom">
                     <ul class="investments-card__bottom-list">
@@ -544,13 +544,13 @@
                           <svg width='16' height='14'>
                             <use href='img/sprite/sprite.svg#icon8'></use>
                           </svg>
-                          10 Matic
+                          1
                         </span>
                         <span class="investments-card__bottom-value">
                           <svg width='16' height='14'>
                             <use href='img/sprite/sprite.svg#icon8'></use>
                           </svg>
-                          1000 Matic
+                          10000000
                         </span>
                       </li>
                     </ul>
@@ -603,13 +603,13 @@
                           <svg width='16' height='14'>
                             <use href='img/sprite/sprite.svg#icon8'></use>
                           </svg>
-                          100 Matic
+                          1
                         </span>
                         <span class="investments-card__bottom-value">
                           <svg width='16' height='14'>
                             <use href='img/sprite/sprite.svg#icon8'></use>
                           </svg>
-                          2000 Matic
+                          2000
                         </span>
                       </li>
                     </ul>
@@ -1949,6 +1949,109 @@
           </a>
         </li>
       </ul>
+
+    </div>
+  </div>
+
+  <div class="modal" data-popup="failed">
+    <div class="modal__box" role="dialog" aria-modal="true">
+
+      <div class="modal__top">
+        <div class="modal__top-img--left modal__top-img">
+          <picture>
+            <img width='67' height='107' src='img/icons/img7.png' alt='image'>
+          </picture>
+        </div>
+        <div class=" modal__top-img">
+          <picture>
+            <img width='68' height='120' src='img/icons/img4.png' alt='image'>
+          </picture>
+        </div>
+        <button class="close modal__close" aria-label="Закрыть модальное окно">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#close'></use>
+          </svg>
+        </button>
+
+        <button class="modal-button">
+          <svg width='30' height='30'>
+            <use href='img/sprite/sprite.svg#upload'></use>
+          </svg>
+          withdrawls
+        </button>
+
+        <div class='modal__swiper main-swiper'>
+          <div class='main-swiper__container swiper-container'>
+            <ul class='main-swiper__wrapper swiper-wrapper'>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+              <li class='main-swiper__slide swiper-slide'>
+                <span class="main-swiper__icon">
+                  <svg width='79' height='16'>
+                    <use href='img/sprite/sprite.svg#slide1'></use>
+                  </svg>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-failed">
+        <div class="modal-failed__inner">
+          <div class="modal-failed__img">
+            <img src="/img/sprite/img1.svg" alt="image" width="159" height="159">
+          </div>
+          <p>Ooops... there's nothing here</p>
+        </div>
+      </div>
 
     </div>
   </div>

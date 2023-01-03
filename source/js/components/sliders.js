@@ -9,7 +9,10 @@ const hiddenSliders = [...document.querySelectorAll('.main-swiper__container')];
     const headerSwiper = new Swiper (slider, {
       slidesPerView: 'auto',
       spaceBetween: 10,
+      observer: true,
+      observeParents: true,
       loop: true,
+      centeredSlides:true,
       speed: 3000,
             autoplay: {
               delay: 0,
