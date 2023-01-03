@@ -8,7 +8,6 @@
     border-radius: 18px;
     padding: clamp(20px, 3.636vw, 40px) clamp(30px, 5.487vw, 62px) 60px;
 
-
     @include small-tablet{
         grid-template-columns: 100%;
         border-radius: 12px;
